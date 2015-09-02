@@ -17,29 +17,24 @@ function CASH_setup() {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on Beach, use a find and replace
-	 * to change 'beach' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'cashmusic', get_template_directory() . '/languages' );
 
-	/**
-	 * Add default posts and comments RSS feed links to head
-	 */
+	/* Add default posts and comments RSS feed links to head */
 	add_theme_support( 'automatic-feed-links' );
 
-
+	/* Wordpress standard content_width needed */
 	if ( ! isset( $content_width ) ) {
 	$content_width = 900;
 	}
-	/**
-	 * This theme uses wp_nav_menu() in two locations.
-	 */
+	
+	/* This theme uses wp_nav_menu() in two locations.*/
 	register_nav_menus( array(
 		'primary'   => __( 'Primary Menu',   'cashmusic' ),
 		'secondary' => __( 'Secondary Menu', 'cashmusic' ),
 	) );
 
-	// Filter wp_nav_menu() to add additional links and other output
+	/* Filter wp_nav_menu() to add additional links and other output */
 	function new_nav_menu_items($items) {
 	$homelink = '<li class="home"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
 	$items = $homelink . $items;
@@ -49,15 +44,10 @@ function CASH_setup() {
 
 	/* Global Cutom Fields for Social Links */
 	add_action('admin_menu', 'add_global_custom_options');
-	//add_settings_field( 'admin_menu', 'add_global_custom_options');
 
 	function add_global_custom_options() {
     	add_theme_page('Social Media Links', 'Social Media Links', 'manage_options', 'functions','global_custom_options');
 	}
-
-	/*function add_theme_page( $page_title, $menu_title, $capability, $menu_slug, $function = '' ) {
-    return add_submenu_page( 'themes.php', $page_title, $menu_title, $capability, $menu_slug, $function );
-	}*/
 
 	function global_custom_options()
 	{ ?>
@@ -81,7 +71,6 @@ function CASH_setup() {
 
 	/* Global Cutom Fields for Site Image Credit */
 	add_action('admin_menu', 'add_image_credit_options');
-	//add_settings_field( 'admin_menu', 'add_image_credit_options');
 
 	function add_image_credit_options() {
 	add_theme_page('Site Image Credit', 'Site Image Credit', 'manage_options', 'imagecredit','image_credit_options');
@@ -109,26 +98,20 @@ function CASH_setup() {
 
 	/* Enable support for Post Formats */
 	add_theme_support( 'post-formats', array( 'video', 'audio', 'image', 'quote', 'status', 'link' ) );
+	
 	/* Enable support for Post featured images */
 	add_theme_support( 'post-thumbnails' );
 
 	/* Site Background Image */
-	/*$background = array(
-	'default-color' => '000000',
-	'default-image' => '%1$s/img/background.jpg',
-	);
-
-	add_theme_support( 'custom-background', $background );*/
-
 	add_theme_support( 'custom-background', array( 'wp-head-callback' => 'cash_custom_background' ) );
 
-/*  Custom background callback. */
+	/*  Custom background callback. */
 	function cash_custom_background() {
-    // $background is the saved custom image, or the default image.
+    /* $background is the saved custom image, or the default image. */
     $background = set_url_scheme( get_background_image() );
 
-    // $color is the saved custom color.
-    // A default has to be specified in style.css. It will not be printed here.
+    /* $color is the saved custom color.*/
+    /* A default has to be specified in style.css. It will not be printed here.*/
     $color = get_theme_mod( 'background_color' );
 
     if ( ! $background && ! $color )
@@ -156,20 +139,21 @@ function CASH_setup() {
 
         $style .= $image . $repeat . $position . $attachment;
     }
-?>
-<style type="text/css" id="custom-background-css">
-body.custom-background #header, body.custom-background #contentbg{ <?php echo trim( $style ); ?> }
-</style>
-<?php
-}
+	?>
+		<!--Site Background Image Position  -->
+		<style type="text/css" id="custom-background-css">
+			body.custom-background #header, body.custom-background #contentbg{ <?php echo trim( $style ); ?> }
+		</style>
 
+	<?php }
 }
 endif; // CASH_setup
-add_action( 'after_setup_theme', 'CASH_setup' );
 
+	add_action( 'after_setup_theme', 'CASH_setup' );
 
-/* Preserve Aspect Ratio of iframes in Posts */
-function preserveRatio( $content ) {
+	/* Preserve Aspect Ratio of iframes in Posts */
+	function preserveRatio( $content ) {
+ 
    // A regular expression of what to look for.
    $pattern = '/(<iframe([^2]*)iframe>)/i';
    // What to replace it with. $1 refers to the content in the first 'capture group', in parentheses above
@@ -186,6 +170,5 @@ function preserveRatio( $content ) {
 }
 
 add_filter( 'the_content', 'preserveRatio' );
-
 
 ?>
