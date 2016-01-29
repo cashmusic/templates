@@ -54,7 +54,7 @@
         <meta name="text:Instagram" content='cashmusicorg'/>
         <meta name="text:Soundcloud" content='sc_username'/>
         <meta name="text:iTunes" content='https://itunes.apple.com/'/>
-        <meta name="text:Featured" content='<iframe width="300" height="200" src="http://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&vq=hd1080&listType=user_uploads&list=cashmusicorg" frameborder="0" allowfullscreen="allowfullscreen"></iframe>'/>
+        <meta name="text:Featured" content='<h1><a href="https://cashmusic.org" target="_blank">CASH Music</a><br />theme for musicians</h1>'/>
         <meta name="text:Signup" content="<script type='text/javascript'>
             window.cashmusic.embed('https://cashmusic.org/public','6410', true, 'Sign up to our mailing list');
         </script>"/>
@@ -497,10 +497,12 @@
                 transition:0.3s ease-in-out;
             }
             
-            #front #featured h1{
+            #front #featured h1, #front #featured h1 a{
                 text-align:center;
                 text-transform:uppercase;
                 padding:0;
+                font-size: 2em;
+                line-height:0.8em;
                 word-wrap:break-word;
             }
               
@@ -924,7 +926,7 @@
             }
             
             #posts iframe, #posts object, #posts embed{
-                min-height:394px;
+                min-height:305px;
             }
             
             p{text-align:left;}
