@@ -170,7 +170,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 position:fixed;
                 top:0;
                 left:0;
-                z-index:1;
+                z-index:200;
                 width:100%;
                 -webkit-transition: 0.3s  ease-in-out;
                 -moz-transition: 0.3s  ease-in-out;
