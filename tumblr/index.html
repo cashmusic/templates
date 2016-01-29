@@ -71,7 +71,7 @@
         <!--Base Styles-->
         <style type="text/css">
                 
-                      html{
+            html{
                 width:100%;
                 height:100%; 
                 margin:0;
@@ -106,6 +106,11 @@
                 -webkit-transition: 0.3s  ease-in-out;
                 -moz-transition: 0.3s  ease-in-out;
                 word-wrap:break-word;
+                -webkit-overflow-scrolling: touch; /* lets it scroll lazy */
+            }
+
+            h1, h2, h3, h4, h5, h6{
+                font-weight: 100;
             }
             
             a { 
@@ -144,7 +149,7 @@
             
             blockquote{font-size:14px; margin:10px 0;}
             
-            p   {font-size:14px; line-height:20px;}
+            p   {font-size:14px; line-height:20px; font-weight:100;}
             
             .hidden{
                 display:none;
@@ -160,11 +165,25 @@
                 min-height:200px;
             }
             
+            .post p iframe.cashmusic.embed{
+                height:auto!important;
+            }
+
+
             #posts iframe.spotify_audio_player{
                 min-height:80px;
                 height:80px;
             }
      
+            hr{
+                height:1px;
+                background:#252525;
+                border:none;
+                width:100%;
+                display:block;
+                margin:50px 0;
+            }
+
             /* Site Header */
             
             header{
@@ -210,15 +229,14 @@
             /* Logo */
             
             header .logo{
-                padding:0px;
-                display:block;
-                background-size:50px;
-                -webkit-transition: 0.3s  ease-in-out;
-                -moz-transition: 0.3s  ease-in-out;
-                transition:0.3s ease-in-out;
                 position: fixed;
                 top: 0;
                 left: 0;
+                padding:0px;
+                display:block;
+                -webkit-transition: 0.3s  ease-in-out;
+                -moz-transition: 0.3s  ease-in-out;
+                transition:0.3s ease-in-out;
                 margin: 20px 0 0 20px;
                 background:transparent;
             }
@@ -329,11 +347,6 @@
                color: {color:Link Background Color};
             }
             
-             
-            .shift .menu-toggle svg,  .menu-toggle:hover svg{
-                color:{color:Text Color};
-            }
-            
             .menu-toggle:hover{
                 cursor:pointer;
             }
@@ -387,12 +400,12 @@
                 font-weight: 100;
                 border-radius:0;
                 text-transform: uppercase;
-                border-bottom:solid 1px #eee;
+                border-bottom:solid 1px {color:Accent Color};
             }
 
             .menu-primary-container #menu-primary li a:hover{
-                background:#2b2b2b;
-                color:#f6f6f6;
+                background:{color:Text Color}
+                color:{color:Accent Color};
                 opacity: 1;
             }
             
@@ -456,8 +469,6 @@
                 animation-duration: 1s; 
                 -webkit-animation-fill-mode: both; 
                 animation-fill-mode: both; 
-                /*animation-iteration-count:infinite;
-                -webkit-animation-iteration-count:infinite;*/
                 -webkit-animation-delay: 4s; /* Chrome, Safari, Opera */
                 animation-delay: 4s;
             } 
@@ -519,7 +530,7 @@
             }
             
             #front #featured .inner .post iframe{
-                width:82%6
+                width:82%;
                 height:180px;
                 margin:0 auto;
             }
@@ -573,24 +584,19 @@
                 padding:0;
                 text-align:left;
             }
-            
+        
             #posts h3,  #posts h3 a{
-                font-size:35px;
-                line-height:40px;
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 30px;
                 color:{color:Text Color};
             }
 
-            #posts h3,  #posts h3 a{
-                font-size:55px;
-                line-height:58px;
-                color:{color:Text Color};
-            }
         
             /* Photo Post Type */
             
             #posts .post.link, #posts .post.text{
                 padding:30px;
-                text-align:center;
                 border:none;
             }
         
@@ -793,16 +799,15 @@
             }
             /* Social Links */
                     
-            #social{
+            .social{
                 position:initial;
-                width:100%;
                 text-align:center;
                 z-index:1;
                 display:block;
                 width:auto;
             }
 
-            #social a{
+            .social a{
                 text-indent:-5000em;
                 width:40px;
                 height:40px;
@@ -818,11 +823,11 @@
                 background-color: transparent;
             }
             
-            #social a:hover{
+            .social a:hover{
                 opacity:0.8;     
             }
             
-            #social a svg{
+            .social a svg{
                 display:block;
                 width:20px;
                 height:20px;
@@ -831,7 +836,7 @@
             }
             
             {block:IfHideSocialLinks}
-            #social{
+            .social{
                 display:none;
             }
             {/block:IfHideSocialLinks}
@@ -893,7 +898,6 @@
             #pagination a:hover{
                  background-color:{color:Link Background Color};
                  color:{color:Accent Color};
-                 opacity:1;
             }
             
             /* Site Footer */
@@ -968,10 +972,6 @@
                 opacity:0;
             }
             
-            .top #front #featured{
-                opacity:1;
-            }
-            
             #front #featured .inner .post {
                 padding:0 70px;    
             }
@@ -998,7 +998,7 @@
 
             /* Social Links */
 
-            #social{
+            .social{
                 position:fixed;
                 bottom: 30px;
                 left: 46.5px;
@@ -1006,7 +1006,7 @@
                 display:block;
             }
             
-            #social a{
+            .social a{
                 display:block;
             }
 
@@ -1017,7 +1017,7 @@
             }
                        
             #posts .post.link, #posts .post.text{
-                padding:50px 100px;           
+                padding:50px;           
             }            
             
             /*Cash Mailing List Signup */
@@ -1332,7 +1332,7 @@
         {text:Signup}
         </div><!--signup-->
         
-      <div id="social">
+      <div class="social">
             {block:ifiTunes}<a class="itunes" href="{text:iTunes}" target="_blank"><svg version="1.1" id="iTunes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      width="217.666px" height="267px" viewBox="0 0 217.666 267" enable-background="new 0 0 217.666 267" xml:space="preserve">
 <g>

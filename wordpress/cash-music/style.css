@@ -14,7 +14,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
             html{
                 width:100%;
-                height:100%; 
+                height:100%;
                 margin:0;
                 padding:0;
                 box-sizing: border-box;
@@ -31,7 +31,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 padding:0;
                 background-color: #ddd;
                 background-repeat: no-repeat;
-                background-position: center top; 
+                background-position: center top;
                 background-attachment: fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
@@ -40,7 +40,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 font-family: 'Montserrat',Helvetica,Arial,sans-serif;
                 font-size:0.96em;
                 text-align:left;
-                color:#2b2b2b;
+                color:#252525;
                 height:100%;
                 position:relative;
                 transition: 0.3s ease-in-out;
@@ -53,10 +53,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
             h1, h2, h3, h4, h5, h6{
                 font-weight: 100;
             }
-            
-            a { 
-                background-color:#fff;
-                color:#2b2b2b;
+
+            a {
+                color:#252525;
                 -webkit-border-radius: 3px;
                 -moz-border-radius: 3px;
                 border-radius: 3px;
@@ -66,51 +65,55 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 font-size:14px;
                 word-wrap:break-word;
             }
-        
-            
+
+
             a:hover{
                 opacity:0.7;
                 transition: 0.3s ease-in-out;
                 -webkit-transition: 0.3s  ease-in-out;
                 -moz-transition: 0.3s  ease-in-out;
             }
-        
+
+            p{text-align:justify;
+             font-family: 'Nunito',Helvetica,Arial,sans-serif;}
+
             p:empty {
                 display:none;
             }
-            
+
             p a{
                 text-decoration:underline;
+                word-break: break-all;
             }
-            
+
             ul{
                 padding:0 0 0 20px;
                 font-size:14px;
                 margin:30px 0;
             }
-            
+
             blockquote{font-size:14px; margin:10px 0;}
-            
-            p   {font-size:12px; line-height:20px; font-weight:100;}
-            
+
+            p   {font-size:14px; line-height:20px; font-weight:100;}
+
             .hidden{
                 display:none;
                 visibility:hidden;
             }
-            
+
             img, .post iframe, .post object, .post embed{
                 width:100%;
                 height:auto;
             }
-            
+
             .post p iframe, .post p object, .post p embed{
-                min-height:400px;
+                min-height:200px;
             }
 
             .post p iframe.cashmusic.embed{
                 height:auto!important;
             }
-            
+
             .post iframe.spotify_audio_player{
                 min-height:80px;
                 height:80px;
@@ -118,14 +121,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
             hr{
                 height:1px;
-                background:#222;
+                background:#252525;
                 border:none;
                 width:100%;
                 display:block;
                 margin:50px 0;
             }
 
-            /* Wordpress required */
+            /* Wordpress required as standard */
 
             .alignleft{
                 text-align: left;
@@ -141,10 +144,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
             #wrapper{
                 margin:0 auto;
-                height:100vh;
             }
 
-            .size-auto, 
+            .size-auto,
             .size-full,
             .size-large,
             .size-medium,
@@ -160,9 +162,242 @@ Use it to make something cool, have fun, and share what you've learned with othe
             .gallery-caption{}
             .bypostauthor{}
 
-            /* Site #header */
+
+            /* Site Header */
+
+
+            header{
+                position:fixed;
+                top:0;
+                left:0;
+                z-index:1;
+                width:100%;
+                -webkit-transition: 0.3s  ease-in-out;
+                -moz-transition: 0.3s  ease-in-out;
+                transition:0.3s ease-in-out;
+                margin:0;
+            }
+
+            header h1{
+                margin:0;
+                padding:0;
+                line-height:20px;
+                display:inline-block;
+                opacity:0;
+                visibility:hidden;
+            }
             
-            #header{
+            header h1 a{
+                margin:0 0 0 100px;
+                padding:15px 5px;
+                float:left;
+                height:50px;
+                font-weight:400;
+                background:none;
+                color:#252525;
+            }
+            
+            header #description{
+                margin:0;
+                padding:0;
+                display:inline-block;
+                opacity:0;
+                visibility:hidden;
+            }
+
+
+            /* Logo */
+
+            header .logo{
+                position:fixed;
+                top: 0;
+                left: 0;
+                padding:0px;
+                display: block;
+                -webkit-transition: 0.3s  ease-in-out;
+                -moz-transition: 0.3s  ease-in-out;
+                transition:0.3s ease-in-out;
+                margin:30px 0 30px 20px;
+                background:transparent;
+                z-index: 200;
+            }
+
+            header .logo img{
+                width:auto;
+                height:70px;
+                display:block;
+                background:transparent;
+            }
+
+            /* Main Navigation */
+
+            /* Menu Toggle Switch */
+
+            .menu-toggle{
+                width: 20px;
+                height: 20px;
+                position: fixed;
+                top:48px;
+                right:20px;
+                margin:0;
+                padding:0;
+                background:transparent;
+                z-index:500;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+            }
+
+            .menu-toggle span{
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background:#252525;
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .3s ease-in-out;
+                -moz-transition: .3s ease-in-out;
+                -o-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+            }
+
+            .menu-toggle span:nth-child(1) {
+                top: 0px;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            .menu-toggle span:nth-child(2) {
+                 top:5px;
+                 left:0;
+                 opacity:1;
+            }
+
+            .menu-toggle span:nth-child(3) {
+                top: 10px;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            .shownav .menu-toggle span:nth-child(1) {
+                top: 5px;
+                -webkit-transform: rotate(135deg);
+                -moz-transform: rotate(135deg);
+                -o-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+
+            .shownav .menu-toggle span:nth-child(2){
+                top: 0px;
+                opacity:0;
+                left: 0px;
+            }
+
+            .shownav .menu-toggle span:nth-child(3){
+                 top: 5px;
+                -webkit-transform: rotate(-135deg);
+                -moz-transform: rotate(-135deg);
+                -o-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+
+            .menu-toggle svg{
+               height: 20px;
+               width: 20px;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               margin:-10px 0 0 -10px;
+               fill: currentColor;
+               color: #252525;
+            }
+
+            .menu-toggle:hover{
+                cursor:pointer;
+            }
+
+            /* Navigation Page Links */
+
+            #menu-primary-outer{
+                display: table;
+                position: fixed;
+                height: 100%;
+                height: 100vh;
+                width: 100%;
+                top:0;
+                right:-100%;
+                z-index:400;
+                background:rgba(255,255,255,0.98);
+                transition: 0.5s ease-in-out;
+                -webkit-transition: 0.5s ease-in-out;
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            }
+             .shownav #menu-primary-outer{
+                right:0%;
+            }
+
+            .menu-primary-container{
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            #menu-primary{
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                list-style-type: none;
+                padding:0;
+            }
+
+            .menu-primary-container #menu-primary li a{
+                background:none;
+                color:#252525;
+                text-align: center;
+                padding:30px 30px;
+                width:96%;
+                border:none;
+                font-size: 30px;
+                display:inline-block;
+                margin:0 2% 1px 2%;
+                font-size: 20px;
+                font-weight: 100;
+                border-radius:0;
+                text-transform: uppercase;
+                border-bottom:solid 1px #eee;
+            }
+
+            .menu-primary-container #menu-primary li a:hover{
+                background:#252525;
+                color:#f5f5f5;
+                opacity: 1;
+            }
+
+            /* Remove home link from secondary menu */
+            #menu-secondary .home{
+                display:none;
+            }
+
+            /* Splash Page */
+
+            #front{
                 height:0%;
                 height:0vh;
                 width:100%;
@@ -176,24 +411,68 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 -o-background-size: cover;
                 background-size: cover;
             }
+
+            /* Front scroll hint (hidden for mobile) */
+            #front .scroll{
+                position:absolute;
+                bottom:30px;
+                left:50%;
+                margin:0 0 0 -20px;
+                height:40px;
+                width:40px;
+            }
             
-             .logo{
-                margin:30px auto;
-                width:75px;
-                height:75px;
-                display: block;
-                z-index: 2;
-                opacity:0.8;
+            #front .scroll svg{
+                width:100%;
+                height:100%;
+                fill:#252525;
             }
-
-             .logo a{
-                padding:0;
-                display: block;
-                background:none;
+            
+            #front .scroll:hover{
+                cursor:pointer;   
+                -webkit-animation-name: bounce; 
+                animation-name: bounce;
+                -webkit-animation-duration: 1s; 
+                animation-duration: 1s; 
+                -webkit-animation-fill-mode: both; 
+                animation-fill-mode: both;
+                animation-iteration-count:infinite;
+                -webkit-animation-iteration-count:infinite;
             }
+            
+            /* Bounce Animation */
+            
+            .animated { 
+                -webkit-animation-duration: 1s; 
+                animation-duration: 1s; 
+                -webkit-animation-fill-mode: both; 
+                animation-fill-mode: both; 
+                -webkit-animation-delay: 4s; /* Chrome, Safari, Opera */
+                animation-delay: 4s;
+            } 
+
+            @-webkit-keyframes bounce { 
+                0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+                40% {-webkit-transform: translateY(-30px);} 
+                60% {-webkit-transform: translateY(-15px);} 
+            } 
+
+            @keyframes bounce { 
+                0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+                40% {transform: translateY(-30px);} 
+                60% {transform: translateY(-15px);} 
+            } 
+
+            .bounce { 
+                -webkit-animation-name: bounce; 
+                animation-name: bounce; 
+            }
+            
+
+            /* The #front #featured area is the splash page content area position content here */
 
 
-            #featured{
+            #front #featured{
                 display: none;
                 height:400px;
                 width:50%;
@@ -208,11 +487,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 transition:0.3s ease-in-out;
             }
 
-            .up #featured{
-                opacity:0; 
-            }
-
-            #featured .entry{
+            #featured .post{
                 position: relative;
                 opacity:1;
                 background:#efefef;
@@ -225,17 +500,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 transition: 0.3s ease-in-out;
             }
 
-             #featured .entry p{
+            #featured .post p{
                 display: none;
             }
 
-            #featured .entry p:first-of-type {
+            #featured .post p:first-of-type {
                 display: inline-block;
                 text-align: justify;
+                font-size: 12px;
             }
 
 
-            #featured .entry h1 a{
+            #featured .post h1 a{
                 background: none;
                 text-align: left;
                 font-size: 30px;
@@ -244,13 +520,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 line-height: 28px;
             }
 
-            #featured .entry h4 a{
+            #featured .post h4 a{
                 background: none;
                 text-align: left;
                 padding:0;
             }
 
-            #featured .entry .entry-title{
+            #featured .post .post-title{
                 margin: 0 0 30px 0;
                 padding:10px 0;
                 display: inline;
@@ -259,11 +535,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 text-transform: uppercase;
             }
 
-            #featured .entry.release{
-           
-            }
-
-            #featured .entry.release img{
+            #featured .post.release img{
                 height:100%;
                 width:auto;
                 margin:0 auto;
@@ -272,7 +544,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
             }
 
-            #featured .entry iframe{
+            #featured .post iframe{
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -282,220 +554,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 right: 0;
             }
 
-            #featured .entry.release .inner{
+            #featured .post.release .inner{
                 position: absolute;
                 top:0px;
                 right:0px;
                 width:50%;
                 height:90%;
-                background:#222;
+                background:#252525;
                 background:rgba(17,17,17,0.9);
-                z-index: 1;
+                z-index: 100;
                 margin:20px;
                 padding:20px;
                 color:#eee;
                 text-align: left;
             }
 
-            #featured .entry.release .inner p{
+            #featured .post.release .inner p{
                 vertical-align: bottom;
                 padding:0px;
                 color:#f5f5f5;
                 font-size: 12px;
                 font-weight: 100;
-            }
-
-            /* Main Navigation */
-            
-            .menu-toggle{
-                position:fixed;
-                top:50px;
-                right:37.5px; 
-                padding:2px;
-                z-index:20;
-                text-align: center;
-                vertical-align: bottom;
-            }
-           
-
-            .menu-toggle:hover, .search-toggle:hover{
-                opacity:0.8; 
-                cursor:pointer;    
-            }
-
-            #menu-primary-outer{
-                display: table;
-                position: fixed;
-                height: 100%;
-                width: 100%;
-                 /*position:fixed;*/
-                top:0;
-                right:-100%;
-                /*min-height:100%;*/
-                z-index:10;
-                background:rgba(255,255,255,0.98);
-                transition: 0.5s ease-in-out;
-                -webkit-transition: 0.5s ease-in-out;
-                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-            }
-             .show #menu-primary-outer{
-                right:0%;
-            }
-
-            .menu-primary-container{
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            #menu-primary{
-                margin-left: auto;
-                margin-right: auto; 
-                width: 100%;
-                list-style-type: none;
-                padding:0;
-            }
-            
-            .menu-primary-container #menu-primary li a{
-                background:none;
-                color:#2b2b2b;
-                text-align: center;
-                padding:30px 30px;
-                width:96%;
-                border:none;
-                font-size: 30px;
-                display:inline-block;
-                margin:0 2% 1px 2%;
-                font-size: 20px;
-                font-weight: 100;
-                border-radius:0;
-                text-transform: uppercase;
-                /*background:#eee;*/
-                border-bottom:solid 1px #eee;
-            }
-
-            .menu-primary-container #menu-primary li a:hover{
-                background:#2b2b2b;
-                color:#f6f6f6;
-                opacity: 1;
-            }
-
-
-            /* Navigation Page Links */
-            
-            nav{
-                margin:0;
-                padding:0;
-                display:block;
-                background:#222222;
-                opacity:0.95;
-                width:100%;
-                height:100%;
-                position:fixed;
-                left:0;
-                z-index:2;
-                top:-150%;
-                -webkit-transition: 0.3s  ease-in-out;
-                -moz-transition: 0.3s  ease-in-out;
-                transition:0.3s ease-in-out;
-            }
-            
-            nav.show{
-                top:0;
-            }
-            
-            nav ul{
-                list-style-type:none;
-                padding:22% 0;
-                margin:0;
-                text-align:center;
-            }
-            
-            nav ul li{
-                display:inline-block;   
-            }
-            
-            nav a{
-                font-size:50px;
-                font-weight:700;
-                display:inline-block;
-                background:none;
-                color:#666666;
-            }
-            
-            nav a:hover{
-                background:#F6F6F6;
-                color:;
-            }
-
-            /* Comments */
-
-            #respond{
-                background:#eee;
-                background:rgba(238,238,238,0.9);
-                padding:20px;
-                border:solid 1px #ddd;
-            }
-
-            #respond textarea{
-                width:100%;
-                font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-   
-            }
-
-            #respond .logged-in-as{
-                background: #ddd;
-                padding:5px;
-            }
-
-            #respond textarea{
-                padding:20px;
-                border: none;
-                 font-size: 12px;
-            }
-
-              #respond textarea:focus,  #respond input:focus{
-                background:#ddd;
-                outline: none;
-            }
-
-            .comment-form input{
-                border: none;
-                padding:10px 20px;
-                width: 100%;
-                font-size: 12px;
-                display: block;
-                font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-            }
-
-            .comment-list{
-            	list-style-type: none;
-            	margin:0;
-                padding:0;
-            }
-
-            .comment-author.vcard{
-              	background: #ddd;
-                font-size: 10px;
-            }
-
-
-            .comment-author.vcard img{
-            	width:20px;
-            }
-
-            .comment .comment-body{
-                background:#fff;
-                padding:20px;
-                margin:0 0 2px 0;
-            }
-
-
-            .comment-awaiting-moderation{
-                font-size: 12px;
-                color:#ddd;
-                padding:10px 0;
             }
 
             /* Slick Carousel */
@@ -518,15 +597,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 background: none;
                 border:none;
                 text-indent: -5000px;
-                background: url(img/arw.png) 50% 50% no-repeat;
+                background: url(img/arw.svg) 50% 50% no-repeat;
                 position: fixed;
                 top:50%;
             }
 
             .slick-prev{
                 left:15%;
-                -webkit-transform: rotate(180deg);  
-                -moz-transform: : rotate (180deg); 
+                -webkit-transform: rotate(180deg);
+                -moz-transform: : rotate (180deg);
                 transform: : rotate (180deg);
             }
 
@@ -548,84 +627,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 -webkit-transform: rotate(0deg) scale(1.1); /* Safari */
                 transform: rotate(0deg) scale(1.1);
             }
-                
-            /* Search */
-            
-            .search-toggle{
-                position:fixed;
-                top:90px;
-                right:37.5px; 
-                padding:2px;
-                z-index:20;
-                text-align: center;
-                vertical-align: bottom;
-            }
 
-            #search-wrap{
-                position:fixed;
-                top:0;
-                left:0;
-                z-index: 30;
-                height:100%;
-                width:100%;
-                background:rgba(255,255,255,0.98);
-                -webkit-transform: scale(0);  /* Saf3.1+, Chrome */
-                -moz-transform: scale(0);  /* FF3.5+ */
-                transform: scale(0);
-                opacity:0;
-                transition: 0.3s ease-in-out;
-                -webkit-transition: 0.3s ease-in-out;
-            }
-            
-            .find #search-wrap{
-                -webkit-transform: scale(1);  /* Saf3.1+, Chrome */
-                -moz-transform: scale(1);  /* FF3.5+ */
-                transform: scale(1);
-                opacity:1;
-            }
 
-            #search-wrap .inner{
-                position:absolute;
-                top:50%;
-                left:50%;
-                margin:-50px 0 0 -40%;
-                width:80%;
-                height:100px;
-            }
-
-            #search-wrap .inner input{
-                background:none;
-                padding:35px 0;
-                border-bottom:#ddd solid 5px;
-                border-radius: 0;
-                font-size: 30px;
-                color:#666;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-            }
-
-            #search-wrap .inner input:hover{
-                border-color:#666;
-            }
-
-            #search-wrap .close{
-                -webkit-transform: rotate(45deg);  /* Saf3.1+, Chrome */
-                -moz-transform: : rotate (45deg);  /* FF3.5+ */
-                transform: : rotate (45deg);
-                position:fixed;
-                top:50px;
-                right:37.5px; 
-                padding:2px;
-                z-index:31;
-                text-align: center;
-                vertical-align: bottom;
-            }
-
-             #search-wrap .close:hover{
-                cursor: pointer;
-            }
-            
             /* Main Content */
 
             .page-title{
@@ -634,7 +637,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 text-transform: uppercase;
                 padding:0 0 10px 0;
                 margin:0 0 20px 0;
-                border-bottom:5px solid #222;
+                border-bottom:5px solid #252525;
             }
 
             #main{
@@ -642,8 +645,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 text-align: left;
                 margin:0 auto 0 auto;
                 min-height:100%;
-                z-index:1;
-                padding:5px;
+                z-index:100;
+                padding:130px 0 0 0;
                 overflow:hidden;
             }
 
@@ -664,21 +667,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: cover;
-                filter: blur(50px);
-                -webkit-filter: blur(50px);
+                filter: blur(20px);
+                -webkit-filter: blur(20px);
                 -webkit-transform: translate3d(0, 0, 0);
-                opacity: 0.8;
+                opacity: 0.3;
             }
-            
-            .lrg #content{
-                margin:140px auto 0 auto;
-            }
-            
+
             #content{
                 min-height:100%;
                 margin:0 auto;
                 position:relative;
-                padding:10px;
+                padding:10px 20px;
                 background: -moz-linear-gradient(left,  rgba(221,221,221,1) 0%, rgba(221,221,221,0) 100%); /* FF3.6+ */
                 background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(221,221,221,1)), color-stop(100%,rgba(221,221,221,0))); /* Chrome,Safari4+ */
                 background: -webkit-linear-gradient(left,  rgba(221,221,221,1) 0%,rgba(221,221,221,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -689,68 +688,79 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 background:rgba(17,17,17,0.9);
                 background:none;
             }
-            
+
             #content a{
                 background-color:transparent;
                 padding:0;
             }
 
-            /* Article Styling */
-            
-            #content article.post, #content article.page{
+            /* Post Styling */
+
+            #posts .post, #posts .page{
                 padding:0 0 5px 0;
                 margin:0 0 10px 0;
                 background:#efefef;
             }
 
-            #content article.post.format-video{
+            #posts .post{
+             position: relative;
+              -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+              -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+              box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            }
+
+            #posts .post header{
+                position: initial;
+            }
+
+            #posts .post.format-video{
                 padding:0;
             }
 
-            #content article.post.format-audio p{
+            #posts .post.format-audio p{
                 display: none;
             }
 
-            #content article.post .inner{
+            #posts .post .inner{
                 padding:20px;
             }
 
-            #content article.post p{
+            #posts .post p{
                 padding:0 20px 10px 20px;
             }
 
-            #content article.post p iframe{
+            #posts .post p iframe{
                 padding:0 0 10px 0;
             }
 
-             #content article.post p:last-of-type{
+             #posts .post p:last-of-type{
                 padding-bottom: 20px;
             }
 
-            #content article.page{
+            #posts .page{
                 padding:20px;
             }
 
             /* Preserve iframe aspect ratio */
 
-            #content article.post .aspect{
+            #posts .post .aspect{
             width: 100%;
             padding-bottom: 56.25%;  /* 16:9 ratio */
             position: relative;
             margin: 0;
             }
 
-            #featured .entry .aspect{
+            #featured .post .aspect{
             width: 100%;
             margin: 0;
             min-height: 200px;
             }
 
-            #content article.post.format-audio .aspect{
+            #posts .post.format-audio .aspect{
             padding:0;
             }
 
-            #content article.post .aspect iframe, #featured .entry .aspect iframe{
+            #posts .post .aspect iframe, #featured .post .aspect iframe{
             width: 100%;
             height: 100%;
             position: absolute;
@@ -760,24 +770,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
             right: 0;
             }
 
-            #content article.post.format-audio .aspect iframe{
+            #posts .post.format-audio .aspect iframe{
                 position: relative;
                 height:300px;
             }
 
-            #content article.post a img{
+            #posts .post a img{
                 width:100%;
                 height:auto;
             }
 
+            /* Specific Post types */
 
-            /* Specific Article types */
-
-            #content article.post.format-video{
+            #posts .post.format-video{
                 position: relative;
             }
 
-            #content article.post h1 a, #content article.post h1{
+            #posts .post h1 a, #posts .post h1{
                 display: block;
                 margin:0;
                 padding:0;
@@ -787,7 +796,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 display:inline;
             }
 
-            #content article.post h4,   #content article.post h4 a{
+            #posts .post h4,   #posts .post h4 a{
                 display:block;
                 font-size:12px;
                 font-weight: 100;
@@ -797,69 +806,354 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
             /* Post Divider */
             .icon-divider{
-                margin:10px 0;
                 padding:0;
                 font-size: 80px;
                 text-align: center;
-                color:rgba(43,43,43,0.9);
+                color:252525
+            }
+
+            /* Imagery Credit */
+            
+            .credit{
+                display:none;
+                position:absolute;
+                margin:30px 30px;
+                padding:0;
+                bottom:0;
+                right:0;
+                z-index:300;
+                text-align: right;
+                background:none;
+                border-radius: 0;
+                border-bottom:solid 2px #333;
+            }
+
+             .credit p{
+                font-size: 12px;
+                line-height: 20px;
+                font-family: 'Montserrat',Helvetica,Arial,sans-serif;
             }
 
             /* Social Links */
-            
-            #social{
-                z-index:2;
-                display:block;
-                text-align: center;
-                margin:50px auto 0 auto;
-                position: absolute;
-                bottom:30px;
+
+            .social{
+                position:initial;
+                text-align:center;
+                z-index:100;
+                width:auto;
             }
 
-            #social ul{
-                list-style-type: none;
-                margin:0;
-                padding:0;
-                text-align: center;
-            }
-            
-            #social a{
+            .social a{
                 text-indent:-5000em;
-                width:35px;
-                height:35px;
+                width:40px;
+                height:40px;
                 padding:0;
                 margin:0 0 5px 0;
                 display:inline-block;
                 -webkit-border-radius: 50px;
                 -moz-border-radius: 50px;
                 border-radius: 50px;
-                background:none;
                 background-position:50% 50%;
                 background-repeat:no-repeat;
-                background-size:60%;
-                filter: invert(70%);
-                -webkit-filter: invert(70%);
-                /*background-color:#f6f6f6;*/
+                background-size:40%;
+                background-color: transparent;
             }
 
-            /* Remove home link from secondary menu */
-            #menu-secondary .home{
-                display:none;
-            }
-            
-            #social a:hover{
-                opacity:0.8;     
+            .social a:hover{
+                opacity:0.8;
             }
 
-            #social .twitter{background-image:url('http://static.tumblr.com/6svt24a/HWanmlzf8/tw.png');}
-            #social .facebook{background-image:url('http://static.tumblr.com/6svt24a/9EKnmlzgw/fb.png');}
-            #social .yt{background-image:url('http://static.tumblr.com/6svt24a/WyAnmm0kf/yt.png');}
-            #social .soundcloud{background-image:url('http://static.tumblr.com/6svt24a/trqnmm8n6/soundcloud.png');}
-            #social .itunes{background-image:url('http://static.tumblr.com/6svt24a/jK4nmt28i/itunes.png');}
-            #social .instagram{background-image:url('http://static.tumblr.com/6svt24a/hqFnmm8pg/instagram.png');}
-            
-        
+            .social a svg{
+                display:block;
+                width:20px;
+                height:20px;
+                color:#252525;
+                color:currentColor;
+            }
+
+            #wrapper .social{
+                display: none;
+            }
+
+            #wrapper #main .social{
+                display:block;
+            }
+
+            /* Search */
+
+            .search-toggle{
+                position:fixed;
+                top:80px;
+                right:20px;
+                padding:2px;
+                z-index:200;
+                text-align: center;
+                vertical-align: bottom;
+                -webkit-transition: 0.3s  ease-in-out;
+                -moz-transition: 0.3s  ease-in-out;
+                transition:0.3s ease-in-out;
+            }
+
+            .search-toggle:hover{
+                opacity:0.5;
+                cursor: pointer;
+            }
+
+            #search-wrap{
+                position:fixed;
+                top:0;
+                left:0;
+                z-index: 700;
+                height:100%;
+                width:100%;
+                background:rgba(255,255,255,0.98);
+                -webkit-transform: scale(0);  /* Saf3.1+, Chrome */
+                -moz-transform: scale(0);  /* FF3.5+ */
+                transform: scale(0);
+                opacity:0;
+                transition: 0.3s ease-in-out;
+                -webkit-transition: 0.3s ease-in-out;
+            }
+
+            .find #search-wrap{
+                -webkit-transform: scale(1);  /* Saf3.1+, Chrome */
+                -moz-transform: scale(1);  /* FF3.5+ */
+                transform: scale(1);
+                opacity:1;
+            }
+
+            #search-wrap .inner{
+                position:absolute;
+                top:50%;
+                left:50%;
+                margin:-50px 0 0 -40%;
+                width:80%;
+                height:100px;
+            }
+
+            #search-wrap .inner input{
+                background:none;
+                padding:35px 0;
+                border-bottom:#252525 solid 5px;
+                border-radius: 0;
+                font-size: 30px;
+                color:#252525;
+                font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+                text-transform: uppercase;
+                font-weight: 400;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+
+            #search-wrap .inner input:hover{
+                border-color:#666;
+            }
+
+            #search-wrap .close{
+                width: 20px;
+                height: 20px;
+                position:fixed;
+                top:30px;
+                right:30px;
+                padding:2px;
+                z-index:400;
+                text-align: center;
+                vertical-align: bottom;
+            }
+
+             #search-wrap .close:hover{
+                cursor: pointer;
+            }
+
+            #search-wrap .close span{
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background:#252525;
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .3s ease-in-out;
+                -moz-transition: .3s ease-in-out;
+                -o-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+            }
+
+            #search-wrap .close span:nth-child(1) {
+              top: 5px;
+              -webkit-transform: rotate(135deg);
+              -moz-transform: rotate(135deg);
+              -o-transform: rotate(135deg);
+              transform: rotate(135deg);
+            }
+
+            #search-wrap .close span:nth-child(2){
+               top: 5px;
+              -webkit-transform: rotate(-135deg);
+              -moz-transform: rotate(-135deg);
+              -o-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+            }
+
+            #search-wrap .close svg{
+             height: 20px;
+             width: 20px;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             margin:-10px 0 0 -10px;
+             fill: currentColor;
+             color: #252525;
+            }
+
+
+           /* Comments */
+
+            #respond{
+                background:#eee;
+                background:rgba(255,255,255,0.3);
+                padding:20px;
+            }
+
+            #respond textarea{
+                width:100%;
+                font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+                resize: none;
+            }
+
+            #respond .logged-in-as{
+                background: #ddd;
+                padding:5px;
+            }
+
+            #respond textarea{
+                padding:20px;
+                border: none;
+                 font-size: 12px;
+            }
+
+            #respond textarea:focus,  #respond input:focus{
+                background:#ddd;
+                outline: none;
+            }
+
+            .comment-form input{
+                border: none;
+                padding:10px 20px;
+                width: 100%;
+                font-size: 12px;
+                display: block;
+                font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+            }
+
+            .comment-list{
+                list-style-type: none;
+                margin:0;
+                padding:0;
+            }
+
+            .comment-author.vcard{
+                background: #eee;
+                font-size: 10px;
+                padding:5px;
+                margin:0 0 10px 0;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+            }
+
+
+            .comment-author.vcard img{
+                width:20px;
+              -webkit-border-radius: 50px;
+              -moz-border-radius: 50px;
+              border-radius: 50px;
+            }
+
+            .comment .comment-body{
+                background:#fff;
+                padding:20px;
+                margin:0 0 2px 0;
+            }
+
+            .comment-awaiting-moderation{
+                font-size: 12px;
+                color:#ddd;
+                padding:10px 0;
+            }
+
+            .comment-meta.commentmetadata a{
+                opacity:0.5;
+            }
+
+            .comment p{
+              font-size: 16px;
+            }
+
+            .comment-list .reply a{
+                border:solid 1px #252525;
+                text-align: center;
+                padding: 5px 10px!important;
+                display: block;
+            }
+
+            /* Site Search */
+
+            .search-form{
+                margin:0;
+            }
+
+            .search-form input{
+                background:rgba(17,17,17,0.2);
+                border:none;
+                border-radius: 3px;
+                padding:20px 10px;
+                display: inline-block;
+                margin:0;
+                width:68%;
+            }
+
+            input:focus {
+                outline:none;
+            }
+
+            .search-form .search-submit{
+                background:none;
+                padding:20px 10px;
+                background:rgba(17,17,17,0.2);
+                width:30%;
+            }
+
+            /* Search Results */
+
+            #content .search-result{
+                background:#eee;
+                padding:20px;
+                margin:0 0 1px 0;
+                display: inline-block;
+                width:100%;
+                opacity: 1;
+                overflow: auto;
+            }
+
+            #content .search-result h4{
+                margin:0;
+                padding:0;
+                opacity:0.6;
+             }
+
+
+            #content .search-result:hover{
+                opacity: 0.7;
+            }
+
             /* Site Sidebar */
-
 
             .single-post.format-video #sidebar-sticky-wrapper, .single-post.format-video #sidebar{
                 display: none;
@@ -868,7 +1162,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
             .single-post.format-video #content{
                 width: 100%;
             }
-            
+
             #sidebar-sticky-wrapper{
                 display: none;
                 margin:0;
@@ -928,107 +1222,41 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
             /* Pagination */
 
-            #content .pagination{
-                margin:30px auto;
-                padding:0;
+            #pagination{
+                margin:50px auto;
                 text-align: center;
             }
 
-            #content .pagination a{
+            #pagination a{
+                padding:10px 20px;
                 background: #efefef;
-                padding:10px;
-                margin:0;
                 text-decoration: none;
-            }
-
-            /* Site Search */
-
-            .search-form{
-                margin:0;
-            }
-
-            .search-form input{
-                background:rgba(17,17,17,0.2);
-                border:none;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
                 border-radius: 3px;
-                padding:20px 10px;
-                display: inline-block;
-                margin:0;
-                width:68%;
             }
 
-            input:focus { 
-                outline:none;
+            #pagination a:hover{
+                 background-color:#252525;
+                 color:#efefef;
             }
-
-            .search-form .search-submit{
-                background:none;
-                padding:20px 10px;
-                background:rgba(17,17,17,0.2);
-                width:30%;
-            }
-
-
-            /* Search Results */
-
-            #content .search-result{
-                background:#eee;
-                padding:20px;
-                margin:0 0 1px 0;
-                display: inline-block;
-                width:100%;
-                opacity: 1;
-                overflow: auto;
-            }
-
-            #content .search-result h4{
-                margin:0;
-                padding:0;
-                opacity:0.6;
-             }
-
-
-            #content .search-result:hover{
-                opacity: 0.7;
-            }
-
 
             /* Site Footer */
-            
+
             footer{
                 width:100%;
-                opacity:1;
+                opacity:0.8;
                 padding:0;
+                margin:0 0 20px 0;
                 text-align:center;
-                position: relative;
-                z-index:1;
-            }
-            
-            footer a{
-                /*color:#f6f6f6;*/
-                font-size: 12px;
-                color:#666;
-                background:none; 
-                margin:0;
-                padding:0;
             }
 
-            /* Imagery Credit */
-            .credit{
-                display:block;
-                position:absolute;
-                margin:30px 30px;
-                padding:0;
-                bottom:0;
-                right:0;
-                z-index:3;
-                font-size: 12px;
-                text-align: right;
+            footer a{
+                color:#252525;
                 background:none;
-                border-radius: 0;
-                border-bottom:solid 2px #333;
+                margin:20px 0;
             }
-            
+
 
             /* ==========================================================================
             Media Queries
@@ -1038,9 +1266,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
             /* ====================
             INTERMEDIATE - (Horiztonal Tablet & Above)
             ==================== */
-            
+
             /* Generic */
-            
+
             body{
                 -webkit-overflow-scrolling: auto; /* turn off scroll momentum */
             }
@@ -1053,50 +1281,82 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 padding:50px 30px;
             }
 
-            #social{
-                position:fixed;
-                bottom:30px;
-                left:46.5px;
+            header .logo{
+   
+                margin:30px 0 0 30px;
             }
 
-            #social a{
-                text-indent:-5000em;
-                width:35px;
-                height:35px;
-                padding:0;
-                margin:0 0 5px 0;
-                display:block;
-                -webkit-border-radius: 50px;
-                -moz-border-radius: 50px;
-                border-radius: 50px;
-                background:none;
-                background-position:50% 50%;
-                background-repeat:no-repeat;
-                background-size:60%;
-                filter: invert(70%);
-                -webkit-filter: invert(70%);
-                /*background-color:#f6f6f6;*/
-            }
+            /* Sidebar */
 
-            #menu-primary-outer{
-                width:33.6%;
-            }
-
-            #sidebar, #sidebar-sticky-wrapper,#featured{
+            #sidebar, #sidebar-sticky-wrapper, #front #featured, .credit{
                 display: block;
             }
 
-            #header{
+            /* Navigation */
+            #menu-primary-outer{
+                width:33%;
+            }
+
+            .menu-toggle{
+                position: fixed;
+                top:30px;
+                right:30px;
+            }
+
+            /* Splash Page */ 
+            
+            #front{
                 height:100%;
                 height:100vh;
             }
 
-            .logo{
-                position: fixed;
-                top:0;
-                left:0;
-                margin:30px 0 0 30px;
+            /* Featured Content */
+            
+            #front #featured{
+                opacity:0;
+            }
+            
+            #front #featured .inner .post iframe{
+                width:100%;
+                min-height:420px;
             }
 
-     }   
+            /* Show Featured Content */
+            .top #front #featured{
+                opacity:1;   
+            }
 
+            /* Show Scroll Icon */
+            #front .scroll{
+                display: inline-block;
+            }
+            
+            /* Hide Mobile Fallback */
+            #front .fallback-container{
+                display:none;
+            }
+
+            /* Social Links */
+
+            #wrapper .social{
+                position:fixed;
+                bottom: 30px;
+                left: 46.5px;
+                z-index:600;
+                display:block;
+            }
+
+            #wrapper #main .social{
+                display:none;
+            }
+
+            .social a{
+                display:block;
+            }
+
+            /* Search toggle */
+
+            .search-toggle{
+                top:70px;
+                right:30px;
+     }

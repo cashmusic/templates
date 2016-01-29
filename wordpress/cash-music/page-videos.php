@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Videos
+ Template Name: Videos Page
  *
  * This is your custom page template. You can create as many of these as you need.
  * Simply name is "page-whatever.php" and in add the "Template Name" title at the
@@ -14,13 +14,15 @@
 ?>
 
 <?php get_header(); ?>
+
+<div id="posts">
 <!--Limit posts 10 per page-->
 <?php query_posts($query_string . '&showposts=10'); ?>
 <!-- Page Title -->
 <h1 class="page-title"><?php the_title(); ?></h1>
 
 <!--Posts added by category name-->
-<?php if (have_posts()) :query_posts( array( 'category_name' => 'video' ) ); while (have_posts()) : the_post(); 
+<?php if (have_posts()) :query_posts( array( 'category_name' => 'video' ) ); while (have_posts()) : the_post();
 		// Get Post Format
 		$format = get_post_format( $post_id );
 
@@ -36,7 +38,6 @@
 <?php else: ?>
 <!-- No Posts -->
 <p><?php _e('Sorry, there are no videos posted yet!'); ?></p><?php endif; ?>
+
+</div><!--posts-->
 <?php get_footer(); ?>
-
-
-						

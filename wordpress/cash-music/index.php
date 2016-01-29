@@ -5,6 +5,8 @@
 
  <?php get_header(); ?>
 
+<div id="posts">
+
 	<!--Limit posts 10 per page-->
 	<?php query_posts($query_string . '&showposts=10'); 
 		//Posts
@@ -31,6 +33,8 @@
 
 <?php else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p><?php endif; ?>
+
+</div><!--posts-->
 
 <?php get_footer(); ?>
 

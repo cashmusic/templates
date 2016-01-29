@@ -1,5 +1,5 @@
 <div id="search-wrap">
-<div class="close"><div class="icon icon-plus"></div><!--icon-plus--></div><!--close-->
+<div class="close"><span></span><span></span></div><!--close-->
 <div class="inner">
 <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 	<label>
