@@ -60,11 +60,11 @@
         <meta name="text:Signup" content="<script type='text/javascript'>
             window.cashmusic.embed('https://cashmusic.org/public','6410', true, 'Sign up to our mailing list');
         </script>"/>
-        <meta name="color:Link Color" content="#111111" />
+        <meta name="color:Link Color" content="#252525" />
         <meta name="color:Link Background Color" content="#eeeeee" />
         <meta name="if:Splash Page" content="1"/>
         <meta name="image:Splash Background" content="https://secure.static.tumblr.com/dba800c4bbf321e575399088100e6370/6svt24a/0N3o1a5l7/tumblr_static_5qlgrfgmgk4c0gookksgwg0oo.jpg"/>
-        <meta name="color:Splash Text Color" content="#f5f5f5"/>
+        <meta name="color:Splash Text Color" content="#252525"/>
         <meta name="if:Show Post Background Color" content="1" />
         <meta name="if:Hide Social Links" content="0"/>
 
@@ -157,12 +157,14 @@
                 visibility:hidden;
             }
             
-            img, #posts iframe, #posts object, #posts embed{
+            img, #posts object, #posts embed{
                 width:100%;
                 height:auto;
             }
             
+        
             #posts iframe, #posts object, #posts embed{
+                width:100%;
                 min-height:200px;
             }
             
@@ -590,6 +592,13 @@
                 color:{color:Text Color};
             }
             
+            #posts .tumblr_blog{
+                background:{color:Text Color};
+                color:{color:Accent Color};
+                text-decoration:none;
+                padding:5px 10px;
+            }
+            
             
             /* Text Post Type */
             
@@ -653,6 +662,13 @@
                 margin:0;
             }
             
+            /* Photoset Post Type */
+            
+            #posts .post.photoset{
+                height:auto;
+                width:100%;
+            }
+        
             /* Quote Post Type */
 
              #posts .post.quote{
@@ -927,23 +943,19 @@
                 margin:100px 0;
                 padding:0;
                 list-style-type:none;
+                text-align:center;
             }
             
             #posts .notes li.note{
                 background:transparent!important; 
-                text-align:center;
                 font-size:10px!important;
-                margin:0 0 5px 0!important;
+                margin:0 20px 5px 0!important;
                 padding:5px!important;
                 border:none;
                 -webkit-box-shadow: none;
                 -moz-box-shadow: none;
                 box-shadow: none;
-            }
-            
-            #posts .notes li.note .action{
-                margin:-5px 0 0 0!important;
-                display:block!important;
+                
             }
             
             #posts .notes li.note .action a{
@@ -952,12 +964,53 @@
             }
             
         
-            #posts .notes li .avatar_frame{
-                width:20px!important;
+            #posts .notes  li.note .avatar_frame{
+                margin:0 10px 0 0!important;
+                padding:0!important;
+                float:left;
+                width:16px;
+            }
+            
+            #posts .notes  li.note .avatar_frame img{
                 -webkit-border-radius: 50px!important;
                 -moz-border-radius: 50px!important;
                 border-radius: 50px!important;
             }
+            
+            /* Note Comments */
+            
+            #posts .notes li.note blockquote a{
+                position: relative;
+                padding: 10px;
+                width:100%;
+                margin:5px;
+                background:{color:Accent Color};
+                color:{color:Text Color};
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            }
+            
+            #posts .notes li.note blockquote a:after {
+                content: '';
+                position: absolute;
+                border-style: solid;
+                border-width:  0 10px 10px ;
+                border-color:{color:Accent Color} transparent;
+                display: block;
+                width: 0;
+                z-index: 1;
+                left: 50%;
+                margin:0 0 0 -5px;
+                top: -10px;
+            }
+        
             
             /* Site Footer */
             
@@ -1246,9 +1299,25 @@
                         </article>
                     </li>
                 {/block:Panorama}{block:Photoset}
-                    <li class="post photoset">
-                        <article>
-                        {Photoset-500}{block:Caption}
+                    <!--li class="post photoset">
+                      
+     <article>
+
+     
+        {block:Photos}
+            <img src="{PhotoURL-HighRes}" class="highres">
+        {/block:Photos}
+-->
+<li class="post photoset">
+<article>
+{Photoset}
+
+        {block:Caption}
+            <p>{Caption}</p>
+        {/block:Caption}
+        <p></p>
+        <time>{TimeAgo}</time>
+   }{block:Caption}
                             <div class="caption"><a href="{Permalink}">{Caption}</a></div>
                         {/block:Caption}
                         
@@ -1379,7 +1448,7 @@
                 {/block:Audio}
             
             {block:PostNotes} 
-                {PostNotes-16}
+                {PostNotes-64}
             {/block:PostNotes}  
             
             {/block:Posts}
