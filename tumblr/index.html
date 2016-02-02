@@ -529,12 +529,15 @@
              /* Main Content */
              
             #content{
-                padding:20px;
-                margin:0 auto;
+                padding:120px 20px 20px 20px;
+                margin:0px auto;
                 position:relative;
             }
-        
             
+            .home #content{
+                padding:50px 20px;
+            }
+        
             #content a{
                 background-color:transparent;
                 padding:0;
@@ -918,6 +921,34 @@
                  color:{color:Accent Color};
             }
             
+            /* Notes */
+            
+            .notes{
+                margin:0;
+                padding:0;
+                list-style-type:none;
+            }
+            
+            #posts .notes li.note{
+                background:transparent!important; 
+                text-align:center;
+                font-size:10px!important;
+                margin:0 0 5px 0!important;
+                padding:5px!important;
+                border:none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+            }
+            
+        
+            #posts .notes li .avatar_frame{
+                width:20px!important;
+                -webkit-border-radius: 50px!important;
+                -moz-border-radius: 50px!important;
+                border-radius: 50px!important;
+            }
+            
             /* Site Footer */
             
             footer{
@@ -944,7 +975,7 @@
             
             /* Generic */
             
-            #content{
+            #content, .home #content{
                 max-width:700px;
                 padding:70px;
             }
@@ -1075,7 +1106,7 @@
         </style>
         
     </head>
-    <body class="{block:PreviousPage}subpage{/block:PreviousPage} {block:PermalinkPage}single{/block:PermalinkPage}">
+    <body class=" {block:IfSplashPage}{block:IndexPage}home{/block:IndexPage}{/block:IfSplashPage}{block:PreviousPage}subpage{/block:PreviousPage} {block:PermalinkPage}single{/block:PermalinkPage}">
      <header>
         <a href="/" class="logo">
             <img src="{image:Logo Image}" alt="{Title} - {MetaDescription} - Logo"/>
@@ -1335,7 +1366,13 @@
                         </div><!--footer-->
                         </article>
                     </li>
-                {/block:Audio}{/block:Posts}
+                {/block:Audio}
+            
+            {block:PostNotes} 
+                {PostNotes-64}
+            {/block:PostNotes}  
+            
+            {/block:Posts}
         </ol>
         <!--Pagination-->
         <p id="pagination">
@@ -1345,6 +1382,8 @@
                 <a href="{NextPage}">Next</a>
             {/block:NextPage}
         </p>
+        
+        
         
              <div id="signup">
         <!-- 
