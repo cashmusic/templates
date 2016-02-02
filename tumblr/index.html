@@ -924,7 +924,7 @@
             /* Notes */
             
             .notes{
-                margin:0;
+                margin:100px 0;
                 padding:0;
                 list-style-type:none;
             }
@@ -939,6 +939,16 @@
                 -webkit-box-shadow: none;
                 -moz-box-shadow: none;
                 box-shadow: none;
+            }
+            
+            #posts .notes li.note .action{
+                margin:-5px 0 0 0!important;
+                display:block!important;
+            }
+            
+            #posts .notes li.note .action a{
+                font-size:10px!important;
+                text-decoration:underline!important;
             }
             
         
@@ -1369,7 +1379,7 @@
                 {/block:Audio}
             
             {block:PostNotes} 
-                {PostNotes-64}
+                {PostNotes-16}
             {/block:PostNotes}  
             
             {/block:Posts}
