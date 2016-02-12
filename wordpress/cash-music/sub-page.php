@@ -20,7 +20,7 @@
 <h1 class="page-title"><?php the_title(); ?></h1>
 
 <!--Posts added by category name-->
-<?php if (have_posts()) : while (have_posts()) : the_post(); 
+<?php if (have_posts()) : while (have_posts()) : the_post();
 		// Get Post Format
 		$format = get_post_format( $post_id );
 
@@ -35,8 +35,5 @@
 <div class="pagination"><p><?php posts_nav_link( ' ', 'Older', 'Newer' ); ?></p></div>
 <?php else: ?>
 <!-- No Posts -->
-<p><?php _e('Sorry, there are no videos posted yet!'); ?></p><?php endif; ?>
+<p><?php echo "Sorry, there are no posts yet!"; ?></p><?php endif; ?>
 <?php get_footer(); ?>
-
-
-						

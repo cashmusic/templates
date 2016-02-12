@@ -13,5 +13,5 @@
 
 <a href="<?php the_permalink() ?>" class="search-result">
 				<h4>Posted on <?php the_time('F jS, Y') ?></h4>
-				<p><?php the_title(); ?></p>
+				<h2><?php the_title(); ?></h2>
 </a>

@@ -10,7 +10,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<h1 class="page-title"><?php printf( __( 'Search Results for: %s' ), get_search_query() ); ?></h1>
+			<h1 class="page-title"><?php printf('Search Results for: %s', get_search_query() ); ?></h1>
 
 
 			<!-- Search -->
@@ -31,7 +31,7 @@ get_header(); ?>
 			// End the loop.
 			endwhile;
 
-		
+
 		// If no content, include the "No posts found" template.
 		else :
 			get_template_part( 'content', 'none' );

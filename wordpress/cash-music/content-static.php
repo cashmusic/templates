@@ -6,6 +6,6 @@
 			<div class="inner">
 				<h4 class="date"><?php if ( !is_single() ) {?><a href="<?php the_permalink() ?>" rel="bookmark"><?php } ?>Posted on <?php the_time('F jS, Y') ?><?php if ( !is_single() ) {?></a><?php } ?></h4>
 			</div><!--inner-->
-		<?php the_content(__('(more...)')); ?>
+		<?php the_content(); ?>
 		<p><?php the_tags(); ?></p>
 </article>

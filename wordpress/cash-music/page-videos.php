@@ -37,7 +37,7 @@
 <div class="pagination"><p><?php posts_nav_link( ' ', 'Older', 'Newer' ); ?></p></div>
 <?php else: ?>
 <!-- No Posts -->
-<p><?php _e('Sorry, there are no videos posted yet!'); ?></p><?php endif; ?>
+<p><?php echo "Sorry, there are no videos posted yet!"; ?></p><?php endif; ?>
 
 </div><!--posts-->
 <?php get_footer(); ?>

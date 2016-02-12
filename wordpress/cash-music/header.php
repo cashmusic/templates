@@ -78,7 +78,7 @@ $myposts = get_posts( $args );
 	     <div class="post entry <?php echo $format = get_post_format( $post_id ); ?>">
 	         <h4><a href="<?php the_permalink() ?>" rel="bookmark">Posted on <?php the_time('F jS, Y') ?></a></h4>
 	           <h1><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-		           <?php the_content(__('(more...)'));  ?>
+		           <?php the_content();  ?>
 	     </div><!--post-->
     <?php endforeach; ?>
   </div><!--inner-->

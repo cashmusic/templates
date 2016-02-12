@@ -473,6 +473,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
             #front #featured{
+                pointer-events: none;
                 display: none;
                 height:400px;
                 width:50%;
@@ -485,6 +486,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 -webkit-transition: 0.3s  ease-in-out;
                 -moz-transition: 0.3s  ease-in-out;
                 transition:0.3s ease-in-out;
+            }
+
+            .top #front #featured{
+                pointer-events: visible;
             }
 
             #featured .post{
@@ -650,6 +655,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 overflow:hidden;
             }
 
+            .logged-in.admin-bar #main{
+                overflow:visible;
+            }
+
             #main .inner{
                 max-width:1200px;
             }
@@ -695,6 +704,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
             }
 
             /* Post Styling */
+
+            #posts{
+                margin:0 auto;
+            }
 
             #posts .post, #posts .page{
                 padding:0 0 5px 0;

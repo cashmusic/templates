@@ -11,7 +11,7 @@
 	</section>
 	<!-- Archives -->
 	<section>
-	<h2 ><?php _e('Archives'); ?></h2>
+	<h2 ><?php echo "Archives"; ?></h2>
 	<ul >
 	<?php wp_get_archives('type=monthly'); ?>
 	</ul>

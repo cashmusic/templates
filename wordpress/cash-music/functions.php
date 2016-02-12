@@ -12,7 +12,7 @@ if ( ! function_exists( 'CASH_setup' ) ) :
  * support post thumbnails.
  */
 function CASH_setup() {
-	global $post_id; 
+	global $post_id;
 
 	/**
 	 * Make theme available for translation
@@ -27,6 +27,8 @@ function CASH_setup() {
 	 */
 	add_theme_support( 'automatic-feed-links' );
 
+	/* Add title tag */
+	add_theme_support( 'title-tag' );
 
 	if ( ! isset( $content_width ) ) {
 	$content_width = 900;
@@ -41,7 +43,7 @@ function CASH_setup() {
 
 	// Filter wp_nav_menu() to add additional links and other output
 	function new_nav_menu_items($items) {
-	$homelink = '<li class="home"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
+	$homelink = '<li class="home"><a href="' . home_url( '/' ) . '">' . 'Home' . '</a></li>';
 	$items = $homelink . $items;
 	return $items;
 	}
@@ -103,8 +105,8 @@ function CASH_setup() {
 
 
 	/* Custom Thumbnail Sizes */
-	if ( has_post_thumbnail() ) { 
-		the_post_thumbnail( 'cash-custom-post-size',800 ); 
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail( 'cash-custom-post-size',800 );
 	}
 
 	/* Enable support for Post Formats */
@@ -174,7 +176,7 @@ function preserveRatio( $content ) {
    $pattern = '/(<iframe([^2]*)iframe>)/i';
    // What to replace it with. $1 refers to the content in the first 'capture group', in parentheses above
    //$the_url = the_permalink();
-   $replacement = '<div class="aspect"> 
+   $replacement = '<div class="aspect">
                         $1
                     </div>';
 
@@ -186,6 +188,5 @@ function preserveRatio( $content ) {
 }
 
 add_filter( 'the_content', 'preserveRatio' );
-
 
 ?>
