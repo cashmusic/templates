@@ -4,7 +4,7 @@
   /|............................|
  | |:     CASH MUSIC THEME     :|
  | |:     " cashmusic.org "    :|
- | |:     ,-.   _____   ,-.    :| 
+ | |:     ,-.   _____   ,-.    :|
  | |:    ( `)) [_____] ( `))   :|
  |v|:     `-`   ' ' '   `-`    :|
  |||:     ,______________.     :|
@@ -29,25 +29,16 @@
         <link href='http://fonts.googleapis.com/css?family={text:Google Font Body}:300' rel='stylesheet' type='text/css' />
         <!--Droid Theme-->
         <meta name="theme-color" content="#252525" />
-         <!--Jquery-->
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <!--CASH Music JS-->
         <script type="text/javascript" src="https://cashmusic.org/public/cashmusic.js"></script>
-      {block:IfInfiniteScroll}
-        <!-- Infinite Scroll -->
-    <script src="http://static.tumblr.com/iwtk77u/Yhym2yygt/jquery.imagesloaded.min.js"></script>
-    <script src="http://static.tumblr.com/wgijwsy/Ebfm2v4gy/jquery.masonry.min.js"></script>
-    <script src="http://static.tumblr.com/wgijwsy/u2vm2hxv6/jquery.infinitescroll.min.js"></script> 
-       {/block:IfInfiniteScroll}
-       
+
         <!--Tumblr Meta Data-->
-      
         <meta name="color:Background Color" content="#f5f5f5" />
         <meta name="image:Background Image" content="https://secure.static.tumblr.com/719901c8164c1f8fdcf550aee68014ec/6svt24a/xyeo1jf8p/tumblr_static_8z84g92qbp4ww88kgo40s0skw.jpg"/>
         <meta name="color:Accent Color" content="#e3e3e3" />
         <meta name="color:Navigation Background Color" content="#f5f5f5" />
         <meta name="color:Text Color" content="#252525" />
-        <meta name="image:Logo Image" content="http://static.tumblr.com/6svt24a/gOqo1jcn5/logo.png"/> 
+        <meta name="image:Logo Image" content="http://static.tumblr.com/6svt24a/gOqo1jcn5/logo.png"/>
         <meta name="text:Google Font Header" content='Montserrat'/>
         <meta name="text:Google Font Body" content='Nunito'/>
         <meta name="text:Facebook" content='cashmusic.org'/>
@@ -70,10 +61,10 @@
 
         <!--Base Styles-->
         <style type="text/css">
-                
+
             html{
                 width:100%;
-                height:100%; 
+                height:100%;
                 margin:0;
                 padding:0;
                 box-sizing: border-box;
@@ -90,7 +81,7 @@
                 padding:0;
                 background:{color:Background Color} url('{image:Background Image}') no-repeat;
                 background-repeat: no-repeat;
-                background-position: center top; 
+                background-position: center top;
                 background-attachment: fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
@@ -113,8 +104,8 @@
                 font-weight: 100;
                 font-family:'{text:Google Font Header}',Helvetica,Arial,sans-serif;
             }
-            
-            a { 
+
+            a {
                 color:{color:Link Color};
                 -webkit-border-radius: 3px;
                 -moz-border-radius: 3px;
@@ -126,48 +117,48 @@
                 font-size:14px;
                 word-wrap:break-word;
             }
-        
-            
+
+
             a:hover{
                 opacity:0.7;
                 transition: 0.3s ease-in-out;
                 -webkit-transition: 0.3s  ease-in-out;
                 -moz-transition: 0.3s  ease-in-out;
             }
-            
+
             p{text-align:justify;}
-            
+
             p a{
                 text-decoration:underline;
                 word-break: break-all;
             }
-            
+
             ul{
                 padding:0 0 0 20px;
                 font-size:14px;
                 margin:30px 0;
             }
-            
+
             blockquote{font-size:14px; margin:10px 0;}
-            
+
             p   {font-size:14px; line-height:20px; font-weight:100;}
-            
+
             .hidden{
                 display:none;
                 visibility:hidden;
             }
-            
+
             img, #posts object, #posts embed{
                 width:100%;
                 height:auto;
             }
-            
-        
+
+
             #posts iframe, #posts object, #posts embed{
                 width:100%;
                 min-height:200px;
             }
-            
+
             .post p iframe.cashmusic.embed{
                 height:auto!important;
             }
@@ -177,7 +168,7 @@
                 min-height:80px;
                 height:80px;
             }
-     
+
             hr{
                 height:1px;
                 background:#252525;
@@ -188,7 +179,7 @@
             }
 
             /* Site Header */
-            
+
             header{
                 position:fixed;
                 top:0;
@@ -200,8 +191,8 @@
                 transition:0.3s ease-in-out;
                 margin:0;
             }
-            
-        
+
+
             header h1{
                 margin:0;
                 padding:0;
@@ -210,7 +201,7 @@
                 opacity:0;
                 visibility:hidden;
             }
-            
+
             header h1 a{
                 margin:0 0 0 100px;
                 padding:15px 5px;
@@ -220,7 +211,7 @@
                 background:none;
                 color:{color:Text Color};
             }
-            
+
             header #description{
                 margin:0;
                 padding:0;
@@ -228,9 +219,9 @@
                 opacity:0;
                 visibility:hidden;
             }
-            
+
             /* Logo */
-            
+
             header .logo{
                 position: fixed;
                 top: 0;
@@ -243,18 +234,18 @@
                 margin: 20px 0 0 20px;
                 background:transparent;
             }
-            
+
             header .logo img{
                 width:auto;
                 height:70px;
                 display:block;
                 background:transparent;
             }
-            
+
             /* Main Navigation */
-            
+
             /* Menu Toggle Switch */
-            
+
             .menu-toggle{
                 width: 20px;
                 height: 20px;
@@ -275,7 +266,7 @@
                 transition: .5s ease-in-out;
                 cursor: pointer;
             }
-            
+
             .menu-toggle span{
                 display: block;
                 position: absolute;
@@ -294,7 +285,7 @@
                 -o-transition: .3s ease-in-out;
                 transition: .3s ease-in-out;
             }
-            
+
             .menu-toggle span:nth-child(1) {
                 top: 0px;
                 -webkit-transform: rotate(0deg);
@@ -338,11 +329,11 @@
                 -o-transform: rotate(-135deg);
                 transform: rotate(-135deg);
             }
-            
+
             .menu-toggle:hover{
                 cursor:pointer;
             }
-            
+
             /* Navigation Page Links */
 
             #menu-primary-outer{
@@ -372,12 +363,12 @@
 
             #menu-primary{
                 margin-left: auto;
-                margin-right: auto; 
+                margin-right: auto;
                 width: 100%;
                 list-style-type: none;
                 padding:0;
             }
-            
+
             .menu-primary-container #menu-primary li a{
                 background:none;
                 color:{color:Link Color};
@@ -400,20 +391,20 @@
                 color:{color:Accent Color};
                 opacity: 1;
             }
-            
-            
+
+
             /* Splash Page */
             #front{
                 height:100%;
-                height:100vh; 
+                height:100vh;
                 width:100%;
             }
-            
+
             /* Background Image for Mobile */
             #front .fallback-container{
-                position:absolute; 
-                top: 0; 
-                left: 0; 
+                position:absolute;
+                top: 0;
+                left: 0;
                 display:block;
                 overflow:hidden;
                 width: 100%;
@@ -435,56 +426,56 @@
                 height:40px;
                 width:40px;
             }
-            
+
             #front .scroll svg{
                 width:100%;
                 height:100%;
                 fill:{color:Text};
             }
-            
+
             #front .scroll:hover{
-                cursor:pointer;   
-                -webkit-animation-name: bounce; 
+                cursor:pointer;
+                -webkit-animation-name: bounce;
                 animation-name: bounce;
-                -webkit-animation-duration: 1s; 
-                animation-duration: 1s; 
-                -webkit-animation-fill-mode: both; 
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-fill-mode: both;
                 animation-fill-mode: both;
                 animation-iteration-count:infinite;
                 -webkit-animation-iteration-count:infinite;
             }
-            
+
             /* Bounce Animation */
-            
-            .animated { 
-                -webkit-animation-duration: 1s; 
-                animation-duration: 1s; 
-                -webkit-animation-fill-mode: both; 
-                animation-fill-mode: both; 
+
+            .animated {
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
                 -webkit-animation-delay: 4s; /* Chrome, Safari, Opera */
                 animation-delay: 4s;
-            } 
-
-            @-webkit-keyframes bounce { 
-                0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
-                40% {-webkit-transform: translateY(-30px);} 
-                60% {-webkit-transform: translateY(-15px);} 
-            } 
-
-            @keyframes bounce { 
-                0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-                40% {transform: translateY(-30px);} 
-                60% {transform: translateY(-15px);} 
-            } 
-
-            .bounce { 
-                -webkit-animation-name: bounce; 
-                animation-name: bounce; 
             }
-            
-            
+
+            @-webkit-keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+                40% {-webkit-transform: translateY(-30px);}
+                60% {-webkit-transform: translateY(-15px);}
+            }
+
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+                40% {transform: translateY(-30px);}
+                60% {transform: translateY(-15px);}
+            }
+
+            .bounce {
+                -webkit-animation-name: bounce;
+                animation-name: bounce;
+            }
+
+
             /* The #front #featured area is the splash page content area position content here */
-            
+
              #front #featured{
     			pointer-events: none;
                 display: table;
@@ -501,7 +492,7 @@
                 -moz-transition: 0.3s  ease-in-out;
                 transition:0.3s ease-in-out;
             }
-            
+
             #front #featured h1, #front #featured h1 a{
                 text-align:center;
                 text-transform:uppercase;
@@ -509,7 +500,7 @@
                 font-size:1.8em;
                 line-height:0.8em;
             }
-              
+
             #front #featured .inner{
                 display: table-cell;
                 vertical-align: middle;
@@ -518,46 +509,46 @@
             #front #featured .inner .post{
                 padding:0;
                 margin-left: auto;
-                margin-right: auto; 
+                margin-right: auto;
                 width: 100%;
                 text-align:center;
             }
-            
+
             #front #featured .inner .post iframe{
                 width:82%;
                 height:180px;
                 margin:0 auto;
             }
-            
+
              /* Main Content */
-             
+
             #content{
                 padding:120px 20px 20px 20px;
                 margin:0px auto;
                 position:relative;
             }
-            
+
             .home #content{
                 padding:50px 20px;
             }
-        
+
             #content a{
                 background-color:transparent;
                 padding:0;
             }
-            
+
             /* Tumblr Posts */
-            
+
             #posts{
                 list-style-type:none;
                 margin:0;
                 padding:0;
             }
-            
+
             #posts li p{
                 font-family: '{text:Google Font Body}',Helvetica,Arial,sans-serif;
             }
-            
+
             #posts li{
                 padding:10px;
                 margin:0 0 10px 0;
@@ -568,9 +559,9 @@
                 background:{color:Accent Color};
                 border:solid 1px {color:Accent Color};
                 {/block:IfShowPostBackgroundColor}
-           
+
             }
-            
+
             #posts li article{
                 width:100%;
                 height:100%;
@@ -578,62 +569,62 @@
                 margin:0;
                 position:relative;
             }
-            
+
             #posts li li{
                 border:none;
                 margin:0;
                 padding:0;
                 text-align:left;
             }
-        
+
             #posts h3,  #posts h3 a{
                 font-size: 30px;
                 font-weight: 400;
                 line-height: 30px;
                 color:{color:Text Color};
             }
-            
+
             #posts .tumblr_blog{
                 background:{color:Text Color};
                 color:{color:Accent Color};
                 text-decoration:none;
                 padding:5px 10px;
             }
-            
-            
+
+
             /* Text Post Type */
-            
+
             #posts .post.link{
                 padding:0;
             }
-            
+
             #posts .post.link .link{
-                padding:20px;      
+                padding:20px;
             }
-            
+
             #posts .post.link .link span{
                 opacity:0.5;
                 margin:0 10px 0 0;
             }
-            
+
             #posts .post.link .link_preview{
                 display:block;
                 margin:0;
             }
-            
+
             #posts .post.link .link_preview img{
                 width:100%;
                 height:auto;
             }
-            
-    
+
+
             /* Text Post Type */
-            
+
             #posts .post.text{
                 padding:30px 30px 0 30px;
                 border:none;
             }
-        
+
             #posts .post.text h3{
                 margin:0 0 30px 0;
             }
@@ -642,18 +633,18 @@
             .caption{
                 padding:20px 0 5px 0;
             }
-            
+
             .caption p{
                 margin:0;
                 padding:0;
             }
 
             /* Photo Post Type */
-            
+
             #posts .post.photo{
-                padding:0px;   
+                padding:0px;
             }
-        
+
             #posts .post.photo .caption{
                 padding:20px;
             }
@@ -662,14 +653,14 @@
                 display:block;
                 margin:0;
             }
-            
+
             /* Photoset Post Type */
-            
+
             #posts .post.photoset{
                 height:auto;
                 width:100%;
             }
-        
+
             /* Quote Post Type */
 
              #posts .post.quote{
@@ -678,7 +669,7 @@
                 padding:50px 50px 20px 50px;
                 word-break: break-word;
             }
-            
+
             #posts .post.quote .title{
                 color:{color:Text Color};
                 font-size:55px;
@@ -687,14 +678,14 @@
                 font-style:italic;
                 font-weight:700;
             }
-            
+
             #posts .post.quote .source{
                 display:block;
                 width:100%;
                 margin:15px auto 0 auto;
                 text-align:center;
                 font-style:normal;
-                font-size:14px; 
+                font-size:14px;
                 font-weight:400;
                 line-height:20px;
             }
@@ -715,7 +706,7 @@
                 justify-content: flex-start;
                 flex-flow: row wrap;
             }
-            
+
             #posts .post.chat .chat li{
                 position: relative;
                 padding: 20px;
@@ -730,7 +721,7 @@
                 -moz-box-shadow: none;
                 box-shadow: none;
             }
-            
+
             #posts .post.chat .chat li:nth-of-type(even){
                 text-align:right;
                 justify-content: flex-end;
@@ -750,15 +741,15 @@
                 margin:-15px 0 0 0;
                 top: 50%;
             }
-            
+
             #posts .post.chat .chat li:nth-of-type(even):after{
                 border-width: 15px 0px 15px 15px;
                 left: auto;
                 right:-15px;
             }
-            
+
             /* Post Footer */
-            
+
             .footer{
                 margin:30px;
                 padding:0;
@@ -768,45 +759,45 @@
                 border-radius: 0px;
                 text-align:center;
             }
-            
-            
+
+
             #posts .footer iframe{
                 min-height: 20px;
                 height: 30px;
             }
-            
+
             #posts .post.quote .footer iframe{
                 height:38px;
             }
-            
+
             .footer a{
                 display:inline-block;
                 padding:0;
                 margin:0;
             }
-            
+
             /* Footer Actions */
-            
+
             .footer .like, .footer .reblog{
                 display:inline-block;
                 width:20px;
                 margin:5px;
                 vertical-align: middle;
             }
-            
+
             .footer .like_button{
-                min-height:0;   
+                min-height:0;
                 height:30px;
             }
-            
+
              #posts .post.quote .footer .like_button{
-                  height:40px; 
+                  height:40px;
              }
-            
+
             .footer .like_button #like_wrapper{
                 height:0!important;
             }
-            
+
             .footer .share{
                 padding:5px;
                 width:200px;
@@ -820,7 +811,7 @@
                 border-radius: 3px;
                 background:{color:Accent Color};
             }
-            
+
             .footer .share .fb-share-button{
                 vertical-align:middle;
                 height:20px;
@@ -828,15 +819,15 @@
                 margin:-12px 0 0 0;
                 padding:0;
             }
-            
-            
+
+
             .footer .share .twitter-share-button{
                 width:90px!important;
                 margin:5px 0 0 -5px;
                 padding:0;
             }
             /* Social Links */
-                    
+
             .social{
                 position:initial;
                 text-align:center;
@@ -860,11 +851,11 @@
                 background-size:40%;
                 background-color: transparent;
             }
-            
+
             .social a:hover{
-                opacity:0.8;     
+                opacity:0.8;
             }
-            
+
             .social a svg{
                 display:block;
                 width:20px;
@@ -872,31 +863,31 @@
                 color:{color:Text Color};
                 fill: currentColor;
             }
-            
+
             {block:IfHideSocialLinks}
             .social{
                 display:none;
             }
             {/block:IfHideSocialLinks}
-            
-            
+
+
             /*Cash Mailing List Signup */
-            
+
             /***************************/
             /***************************
-            
+
              ( •_•)
               ( •_•)>⌐■-■
-              
+
               Styles for the element are
               written inline further down
-              the page in 'cssoverride' 
-             
+              the page in 'cssoverride'
+
                 (⌐■_■)
-             
+
               ***************************/
              /***************************/
-            
+
             #signup{
                 position:initial;
                 display:block;
@@ -906,7 +897,7 @@
                 height:55px;
                 text-align:center;
             }
-            
+
             #signup a{
                 padding:0 0 10px 0;
                 color:{color:Text Color};
@@ -916,14 +907,14 @@
                 font-size: 12px;
                 line-height: 20px;
             }
-            
+
             /* Pagination */
-            
+
             #pagination{
-                margin:50px 0; 
+                margin:50px 0;
                 text-align:center;
             }
-            
+
             #pagination a{
                 padding:10px 20px;
                 background-color:{color:Accent Color};
@@ -932,23 +923,23 @@
                 -moz-border-radius: 3px;
                 border-radius: 3px;
             }
-            
+
             #pagination a:hover{
                  background-color:{color:Link Background Color};
                  color:{color:Accent Color};
             }
-            
+
             /* Notes */
-            
+
             .notes{
                 margin:100px 0;
                 padding:0;
                 list-style-type:none;
                 text-align:center;
             }
-            
+
             #posts .notes li.note{
-                background:transparent!important; 
+                background:transparent!important;
                 font-size:10px!important;
                 margin:0 20px 5px 0!important;
                 padding:5px!important;
@@ -956,30 +947,30 @@
                 -webkit-box-shadow: none;
                 -moz-box-shadow: none;
                 box-shadow: none;
-                
+
             }
-            
+
             #posts .notes li.note .action a{
                 font-size:10px!important;
                 text-decoration:underline!important;
             }
-            
-        
+
+
             #posts .notes  li.note .avatar_frame{
                 margin:0 10px 0 0!important;
                 padding:0!important;
                 float:left;
                 width:16px;
             }
-            
+
             #posts .notes  li.note .avatar_frame img{
                 -webkit-border-radius: 50px!important;
                 -moz-border-radius: 50px!important;
                 border-radius: 50px!important;
             }
-            
+
             /* Note Comments */
-            
+
             #posts .notes li.note blockquote a{
                 position: relative;
                 padding: 10px;
@@ -997,7 +988,7 @@
                 -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
                 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             }
-            
+
             #posts .notes li.note blockquote a:after {
                 content: '';
                 position: absolute;
@@ -1011,23 +1002,23 @@
                 margin:0 0 0 -5px;
                 top: -10px;
             }
-        
-            
+
+
             /* Site Footer */
-            
+
             footer{
                 width:100%;
                 color:{color:Text Color};
                 opacity:0.8;
                 text-align:center;
             }
-            
+
             footer a{
                 color:{color:Text Color};
-                background:none;  
+                background:none;
                 margin:20px 0;
             }
-            
+
             /* ==========================================================================
             Media Queries
             ========================================================================== */
@@ -1036,37 +1027,37 @@
             /* ====================
             INTERMEDIATE - (Horiztonal Tablet & Above)
             ==================== */
-            
+
             /* Generic */
-            
+
             #content, .home #content{
                 max-width:700px;
                 padding:70px;
             }
-            
+
             header .logo{
-                margin:30px 0 0 30px;       
+                margin:30px 0 0 30px;
             }
-            
+
             #posts iframe, #posts object, #posts embed{
                 min-height:303px;
             }
-            
+
             p{text-align:left;}
-            
+
             /* Navigation */
             #menu-primary-outer{
                 width:33%;
             }
-            
+
             .menu-toggle{
                 position: fixed;
                 top:30px;
                 right:30px;
             }
-            
-            /* Splash Page */ 
-            
+
+            /* Splash Page */
+
             #front{
                 background:url('{image:Splash Background}');
                 background-repeat: no-repeat;
@@ -1079,21 +1070,21 @@
             }
 
             /* Featured Content */
-            
+
             #front #featured{
                 position:fixed;
                 opacity:0;
             }
-            
+
             #front #featured .inner .post {
-                padding:0 70px;    
+                padding:0 70px;
             }
-            
+
             #front #featured .inner .post iframe{
                 width:70%;
                 min-height:420px;
             }
-            
+
             #front #featured h1, #front #featured h1 a{
                 font-size:2em;
                 word-wrap:break-word;
@@ -1101,7 +1092,7 @@
 
             /* Show Featured Content */
             .top #front #featured{
-                opacity:1;   
+                opacity:1;
                 pointer-events: initial;
             }
 
@@ -1109,7 +1100,7 @@
             #front .scroll{
                 display: inline-block;
             }
-            
+
             /* Hide Mobile Fallback */
             #front .fallback-container{
                 display:none;
@@ -1124,38 +1115,38 @@
                 z-index:1;
                 display:block;
             }
-            
+
             .social a{
                 display:block;
             }
 
             /* Posts */
-            
+
             #posts li{
                 margin:0 0 30px 0;
             }
-                       
+
             #posts .post.text{
-                padding:50px 50px 0 50px;           
-            }            
-            
+                padding:50px 50px 0 50px;
+            }
+
             /*Cash Mailing List Signup */
-            
+
             /***************************/
             /***************************
-            
+
               •_•)
               ( •_•)>⌐■-■
-            
+
               Styles for the element are
               written inline further down
-              the page in 'cssoverride' 
-              
+              the page in 'cssoverride'
+
               (⌐■_■)
-            
+
               ***************************/
              /***************************/
-            
+
             #signup{
                 position:fixed;
                 bottom:15px;
@@ -1165,24 +1156,24 @@
                 z-index:5;
                 margin:0;
             }
-            
+
             {CustomCSS}
             }
         </style>
-        
+
     </head>
     <body class=" {block:IfSplashPage}{block:IndexPage}home{/block:IndexPage}{/block:IfSplashPage}{block:PreviousPage}subpage{/block:PreviousPage} {block:PermalinkPage}single{/block:PermalinkPage}">
      <header>
         <a href="/" class="logo">
             <img src="{image:Logo Image}" alt="{Title} - {MetaDescription} - Logo"/>
         </a>
-     
+
         <h1>{Title}</h1>
             {block:Description}
             <p id="description">{Description}</p>
             {/block:Description}
      </header>
-     
+
      {block:HasPages}
     <a class="menu-toggle">
         <span></span>
@@ -1190,7 +1181,7 @@
         <span></span>
     </a>
     {/block:HasPages}
-    
+
 
     {block:HasPages}
         <div id="menu-primary-outer">
@@ -1204,8 +1195,8 @@
             </nav>
         </div>
     {/block:HasPages}
-     
-    <!--/* Front Page */--> 
+
+    <!--/* Front Page */-->
     {block:IfSplashPage}
     {block:IndexPage}
     <div id="front"
@@ -1234,7 +1225,7 @@
     </div><!--front-->
     {/block:IndexPage}
     {/block:IfSplashPage}
-    
+
     <!--/* Tagged Pages */-->
     <div id="main">
      <div id="content">
@@ -1245,7 +1236,7 @@
                         {block:Title}
                             <h3><a href="{Permalink}">{Title}</a></h3>
                         {/block:Title}{Body}
-                        
+
                         <div class="footer">
                         <div class="reblog">{ReblogButton}</div>
                         <div class="like">{LikeButton}</div>
@@ -1266,7 +1257,7 @@
                         {block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
-                        
+
                         <div class="footer">
                         <div class="reblog">{ReblogButton}</div>
                         <div class="like">{LikeButton}</div>
@@ -1287,7 +1278,7 @@
                         {LinkCloseTag}{block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
-                        
+
                         <div class="footer">
                         <div class="reblog">{ReblogButton}</div>
                         <div class="like">{LikeButton}</div>
@@ -1302,10 +1293,10 @@
                     </li>
                 {/block:Panorama}{block:Photoset}
                     <!--li class="post photoset">
-                      
+
      <article>
 
-     
+
         {block:Photos}
             <img src="{PhotoURL-HighRes}" class="highres">
         {/block:Photos}
@@ -1320,7 +1311,7 @@
    }{block:Caption}
                             <div class="caption"><a href="{Permalink}">{Caption}</a></div>
                         {/block:Caption}
-                        
+
                         <div class="footer">
                         <div class="reblog">{ReblogButton}</div>
                         <div class="like">{LikeButton}</div>
@@ -1341,7 +1332,7 @@
                         {block:Source}
                             <div class="source">{Source}</div>
                         {/block:Source}
-                        
+
                         <div class="footer">
                         <div class="reblog">{ReblogButton}</div>
                         <div class="like">{LikeButton}</div>
@@ -1357,7 +1348,7 @@
                 {/block:Quote}{block:Link}
                     <li class="post link">
                         <article>
-                        
+
                         {block:Thumbnail} <a href="{URL}" class="link_preview" {Target}>
 <img src="{Thumbnail}" alt="{Name}"/></a>
 {/block:Thumbnail}
@@ -1366,7 +1357,7 @@
                         {block:Description}
                             <div class="description">{Description}</div>
                         {/block:Description}
-                        
+
                         <div class="footer">
                         <div class="reblog">{ReblogButton}</div>
                         <div class="like">{LikeButton}</div>
@@ -1413,7 +1404,7 @@
                         {Video-500}{block:Caption}
                             <div class="caption"><a href="{Permalink}">{Caption}</a></div>
                         {/block:Caption}
-                        
+
                         <div class="footer">
                         <div class="reblog">{ReblogButton}</div>
                         <div class="like">{LikeButton}</div>
@@ -1432,7 +1423,7 @@
                         {AudioEmbed}{block:Caption}
                             <div class="caption"><a href="{Permalink}">{Caption}</a></div>
                         {/block:Caption}
-                        
+
                         <div class="footer">
                         <div class="reblog">{ReblogButton}</div>
                         <div class="like">{LikeButton}</div>
@@ -1446,11 +1437,11 @@
                         </article>
                     </li>
                 {/block:Audio}
-            
-            {block:PostNotes} 
+
+            {block:PostNotes}
                 {PostNotes-64}
-            {/block:PostNotes}  
-            
+            {/block:PostNotes}
+
             {/block:Posts}
         </ol>
         <!--Pagination-->
@@ -1461,22 +1452,22 @@
                 <a href="{NextPage}">Next</a>
             {/block:NextPage}
         </p>
-        
-        
-        
+
+
+
              <div id="signup">
-        <!-- 
+        <!--
         /**/ CASH Music Email Capture Widget /**/
-        
+
         CASH Music embeds work by linking with your mailchimp account.
-        You can create your own email capture or email for download widget 
+        You can create your own email capture or email for download widget
         by signing up at http://www.cashmusic.org
-        
+
         /** **/
         -->
         {text:Signup}
         </div><!--signup-->
-        
+
       <div class="social">
             {block:ifiTunes}<a class="itunes" href="{text:iTunes}" target="_blank"><svg version="1.1" id="iTunes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      width="217.666px" height="267px" viewBox="0 0 217.666 267" enable-background="new 0 0 217.666 267" xml:space="preserve">
@@ -1788,46 +1779,45 @@
 </svg>
 </a><!--youtube-->{/block:ifYoutube}
       </div><!--social-->
-        
+
     </div><!--content-->
-    
-    
+
+
         <footer>
         <a href="http://cashmusic.org/" target="_blank">Made with ♡ by CASH Music. Nonprofit, Open-source &amp; Free forever.</a>
         </footer>
-  </div><!--main-->       
+  </div><!--main-->
     <script>
-    
-        /* Jquery Page State Changes */
-        $( document ).ready(function() {
-            
-            $( ".menu-toggle" ).click(function() {
-                $("body").toggleClass('shownav');
-            });
-            
-            if ($(document).scrollTop() <= "50"){
-                $('body').addClass('top');
-            }
-            
-            var lastScrollTop = 0;
-            $(window).scroll(function(event){
-            var st = $(this).scrollTop();
-            if (st > lastScrollTop){
-                $('body').removeClass('top');
-            } 
-            else if ( st < 50 ){
-            $('body').addClass('top');
-            }else {
-            //up scroll
-            }
-            lastScrollTop = st;
-            });
-        
-        });
-        
-        
-    </script>        
-    
+       var cm = window.cashmusic;
+       cm.events.add(cm,'ready',function(e) {
+
+        var toggle = document.getElementsByClassName('menu-toggle')[0];
+        if (toggle) {
+           cm.events.add(toggle,'click', function(e) {
+              e.preventDefault();
+              if (cm.styles.hasClass(document.body, 'shownav')) {
+                 cm.styles.removeClass(document.body,'shownav');
+              } else {
+                 cm.styles.addClass(document.body,'shownav');
+              }
+           });
+        }
+
+        // add a 'reading' class when scrolled down
+        if ((document.documentElement.scrollTop || document.body.scrollTop) <= 50) {
+           cm.styles.addClass(document.body,'top');
+        }
+        window.onscroll = function() {
+           if ((document.documentElement.scrollTop || document.body.scrollTop) <= 50 && !cm.styles.hasClass(document.body,'top')) {
+              cm.styles.addClass(document.body,'top');
+           }
+           if ((document.documentElement.scrollTop || document.body.scrollTop) > 50 && cm.styles.hasClass(document.body,'top')) {
+              cm.styles.removeClass(document.body,'top');
+           }
+        };
+      });
+   </script>
+
           <!--Facebook-->
         <div id="fb-root"></div>
 <script>(function(d, s, id) {
