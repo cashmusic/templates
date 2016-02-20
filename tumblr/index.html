@@ -1790,34 +1790,31 @@
         </footer>
   </div><!--main-->
     <script>
-       var cm = window.cashmusic;
-       cm.events.add(cm,'ready',function(e) {
+      var cm = window.cashmusic;
+      var toggle = document.getElementsByClassName('menu-toggle')[0];
+      if (toggle) {
+         cm.events.add(toggle,'click', function(e) {
+            e.preventDefault();
+            if (cm.styles.hasClass(document.body, 'shownav')) {
+               cm.styles.removeClass(document.body,'shownav');
+            } else {
+               cm.styles.addClass(document.body,'shownav');
+            }
+         });
+      }
 
-        var toggle = document.getElementsByClassName('menu-toggle')[0];
-        if (toggle) {
-           cm.events.add(toggle,'click', function(e) {
-              e.preventDefault();
-              if (cm.styles.hasClass(document.body, 'shownav')) {
-                 cm.styles.removeClass(document.body,'shownav');
-              } else {
-                 cm.styles.addClass(document.body,'shownav');
-              }
-           });
-        }
-
-        // add a 'reading' class when scrolled down
-        if ((document.documentElement.scrollTop || document.body.scrollTop) <= 50) {
-           cm.styles.addClass(document.body,'top');
-        }
-        window.onscroll = function() {
-           if ((document.documentElement.scrollTop || document.body.scrollTop) <= 50 && !cm.styles.hasClass(document.body,'top')) {
-              cm.styles.addClass(document.body,'top');
-           }
-           if ((document.documentElement.scrollTop || document.body.scrollTop) > 50 && cm.styles.hasClass(document.body,'top')) {
-              cm.styles.removeClass(document.body,'top');
-           }
-        };
-      });
+      // add a 'reading' class when scrolled down
+      if ((document.documentElement.scrollTop || document.body.scrollTop) <= 50) {
+         cm.styles.addClass(document.body,'top');
+      }
+      window.onscroll = function() {
+         if ((document.documentElement.scrollTop || document.body.scrollTop) <= 50 && !cm.styles.hasClass(document.body,'top')) {
+            cm.styles.addClass(document.body,'top');
+         }
+         if ((document.documentElement.scrollTop || document.body.scrollTop) > 50 && cm.styles.hasClass(document.body,'top')) {
+            cm.styles.removeClass(document.body,'top');
+         }
+      };
    </script>
 
           <!--Facebook-->
