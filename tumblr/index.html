@@ -31,7 +31,7 @@
         <!--Droid Theme-->
         <meta name="theme-color" content="#252525" />
         <!--CASH Music JS-->
-        <script type="text/javascript" src="https://cashmusic.org/public/cashmusic.js"></script>
+        <script type="text/javascript" src="https://cashmusic.org/public/cashmusic.js" data-options="nowrap"></script>
 
         <!--Tumblr Meta Data-->
         <meta name="color:Background Color" content="#f5f5f5" />
@@ -1164,6 +1164,7 @@
 
     </head>
     <body class=" {block:IfSplashPage}{block:IndexPage}home{/block:IndexPage}{/block:IfSplashPage}{block:PreviousPage}subpage{/block:PreviousPage} {block:PermalinkPage}single{/block:PermalinkPage}">
+     <div class="cm-wrapper">
      <header>
         <a href="/" class="logo">
             <img src="{image:Logo Image}" alt="{Title} - {MetaDescription} - Logo"/>
@@ -1828,5 +1829,6 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=137611429640196";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+    </div><!-- cm-wrapper -->
     </body>
 </html>
