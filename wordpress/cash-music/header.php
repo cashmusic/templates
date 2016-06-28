@@ -76,7 +76,7 @@ $myposts = get_posts( $args );
   <div class="inner">
     <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 	     <div class="post entry <?php echo $format = get_post_format( $post_id ); ?>">
-	         <h4><a href="<?php the_permalink() ?>" rel="bookmark">Posted on <?php the_time('F jS, Y') ?></a></h4>
+	         <h4><a href="<?php the_permalink() ?>" rel="bookmark"><?php echo _e('Posted on', 'cashmusic'); the_time('F jS, Y') ?></a></h4>
 	           <h1><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		           <?php the_content();  ?>
 	     </div><!--post-->
@@ -98,7 +98,7 @@ $myposts = get_posts( $args );
 
 <?php wp_reset_postdata();?>
 <?php if (get_option('image_credit_link') ){ ?><a href="<?php echo get_option('image_credit_link') ?>" target="_blank" class="credit"><?php } ?>
-<?php if (get_option('image_credit_name') ){ ?><p>Background image by <?php echo get_option('image_credit_name') ?></p><?php  } ?>
+<?php if (get_option('image_credit_name') ){ ?><p><?php echo _e('Background image by', 'cashmusic');  echo get_option('image_credit_name'); ?></p><?php  } ?>
 <?php if (get_option('image_credit_link') ){ ?></a><?php } ?>
 </div><!--front-->
 

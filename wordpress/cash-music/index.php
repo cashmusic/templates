@@ -31,6 +31,8 @@
 	<!--pagination-->
 	<div class="pagination"><p><?php posts_nav_link( ' ', 'Prev', 'Next' ); ?></p></div>
 
+
+
 <?php else: ?>
 <p><?php echo "Sorry, no posts matched your criteria."; ?></p><?php endif; ?>
 
