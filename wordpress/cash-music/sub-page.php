@@ -32,8 +32,8 @@
 
 <?php endwhile; ?>
 <!--pagination-->
-<div class="pagination"><p><?php posts_nav_link( ' ', 'Older', 'Newer' ); ?></p></div>
+<div class="pagination"><p><?php posts_nav_link( ' ', 'Prev', 'Next' ); ?></p></div>
 <?php else: ?>
 <!-- No Posts -->
-<p><?php echo "Sorry, there are no posts yet!"; ?></p><?php endif; ?>
+<p><?php echo _e('Sorry, there is no news posted yet!', 'cashmusic'); ?></p><?php endif; ?>
 <?php get_footer(); ?>
