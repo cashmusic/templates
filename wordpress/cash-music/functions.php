@@ -49,60 +49,176 @@ function CASH_setup() {
 	}
 	add_filter( 'wp_nav_menu_items', 'new_nav_menu_items' );
 
-	/* Global Cutom Fields for Social Links */
-	add_action('admin_menu', 'add_global_custom_options');
-	//add_settings_field( 'admin_menu', 'add_global_custom_options');
 
-	function add_global_custom_options() {
-    	add_theme_page('Social Media Links', 'Social Media Links', 'manage_options', 'functions','global_custom_options');
+/* CASH Customisable content */
+
+add_action( 'customize_register' , 'cashmusic_options' );
+
+function cashmusic_options( $wp_customize ) {
+
+// Social Options Section
+$wp_customize->add_section('cashmusic_social_options',
+	array(
+		'title'       => __( 'Social Links', 'cashmusic' ),
+		'priority'    => 80,
+		'capability'  => 'edit_theme_options',
+		'description' => __('Change sidebar social IDs', 'cashmusic'),
+	)
+);
+
+// Social Option Default Settings
+$wp_customize->add_setting( 'apple_id',
+	array(
+		'default' => 'https://itunes.apple.com/us/album/hurry-up/id1018976531'
+	)
+);
+
+$wp_customize->add_setting( 'soundcloud_id',
+	array(
+		'default' => 'leckieeeeeeeeeeeeeeeeeee'
+	)
+);
+
+$wp_customize->add_setting( 'ig_id',
+	array(
+		'default' => 'cashmusic'
+	)
+);
+
+$wp_customize->add_setting( 'facebook_id',
+	array(
+		'default' => 'cashmusic.org'
+	)
+);
+
+$wp_customize->add_setting( 'twitter_id',
+	array(
+		'default' => 'cashmusic'
+	)
+);
+
+$wp_customize->add_setting( 'youtube_id',
+	array(
+		'default' => 'cashmusicorg'
+	)
+);
+
+
+// Social Option Controls
+$wp_customize->add_control( new WP_Customize_Control(
+	$wp_customize,
+	'apple_social_control',
+		array(
+			'label'    => __( 'Apple ID', 'cashmusic' ),
+			'section'  => 'cashmusic_social_options',
+			'settings' => 'apple_id',
+			'priority' => 10,
+		)
+		));
+
+$wp_customize->add_control( new WP_Customize_Control(
+	$wp_customize,
+	'soundcloud_social_control',
+		array(
+			'label'    => __( 'Soundcloud ID', 'cashmusic' ),
+			'section'  => 'cashmusic_social_options',
+			'settings' => 'soundcloud_id',
+			'priority' => 10,
+		)
+		));
+
+$wp_customize->add_control( new WP_Customize_Control(
+	$wp_customize,
+	'ig_social_control',
+			array(
+				'label'    => __( 'Instagram ID', 'cashmusic' ),
+				'section'  => 'cashmusic_social_options',
+				'settings' => 'ig_id',
+				'priority' => 10,
+		)
+		));
+
+$wp_customize->add_control( new WP_Customize_Control(
+	$wp_customize,
+	'facebook_social_control',
+			array(
+				'label'    => __( 'Facebook ID', 'cashmusic' ),
+				'section'  => 'cashmusic_social_options',
+				'settings' => 'facebook_id',
+				'priority' => 10,
+		)
+		));
+
+$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'twitter_social_control',
+			array(
+				'label'    => __( 'Twitter ID', 'cashmusic' ),
+				'section'  => 'cashmusic_social_options',
+				'settings' => 'twitter_id',
+				'priority' => 10,
+		)
+		));
+
+$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'youtube_social_control',
+			array(
+				'label'    => __( 'Youtube ID', 'cashmusic' ),
+				'section'  => 'cashmusic_social_options',
+				'settings' => 'youtube_id',
+				'priority' => 10,
+		)
+		));
+
+
+
+
+		// Background Image Credit
+		$wp_customize->add_section('cashmusic_background_credit',
+			array(
+				'title'       => __( 'Background Image Credit', 'cashmusic' ),
+				'priority'    => 60,
+				'capability'  => 'edit_theme_options',
+				'description' => __('Change sidebar social IDs', 'cashmusic'),
+			)
+		);
+
+		$wp_customize->add_setting( 'background_credit_name',
+			array(
+				'default' => 'Davy Evans'
+			)
+		);
+
+		$wp_customize->add_setting( 'background_credit_link',
+			array(
+				'default' => 'http://davyevans.co.uk/'
+			)
+		);
+
+		$wp_customize->add_control( new WP_Customize_Control(
+			$wp_customize,
+			'credit_name',
+				array(
+					'label'    => __( 'Name', 'cashmusic' ),
+					'section'  => 'cashmusic_background_credit',
+					'settings' => 'background_credit_name',
+					'priority' => 10,
+				)
+				));
+
+		$wp_customize->add_control( new WP_Customize_Control(
+			$wp_customize,
+			'credit_link',
+				array(
+					'label'    => __( 'Link', 'cashmusic' ),
+					'section'  => 'cashmusic_background_credit',
+					'settings' => 'background_credit_link',
+					'priority' => 10,
+				)
+				));
+
 	}
-
-	/*function add_theme_page( $page_title, $menu_title, $capability, $menu_slug, $function = '' ) {
-    return add_submenu_page( 'themes.php', $page_title, $menu_title, $capability, $menu_slug, $function );
-	}*/
-
-	function global_custom_options()
-	{ ?>
-
-    <div class="wrap">
-        <h2>Social Media Links</h2>
-        <form method="post" action="options.php">
-            <?php wp_nonce_field('update-options') ?>
-            	<p><strong>iTunes / &#63743;Music Link:</strong><br /><input type="text" name="itunes_link" size="45" value="<?php echo get_option('itunes_link') ?>" /></p>
-            	<p><strong>Soundcloud ID:</strong><br />(https://soundcloud.com/)<br /><input type="text" name="sc_id" size="45" value="<?php echo get_option('sc_id') ?>" /></p>
-            	<p><strong>Instagram ID:</strong><br />(https://instagram.com/)<br /><input type="text" name="ig_id" size="45" value="<?php echo get_option('ig_id') ?>" /></p>
-           		<p><strong>Twitter ID:</strong><br />(https://twitter.com/)<br /><input type="text" name="twitter_id" size="45" value="<?php echo get_option('twitter_id') ?>" /></p>
-            	<p><strong>Facebook Page Link:</strong><br />(https://www.facebook.com/)<br /><input type="text" name="fb_link" size="45" value="<?php echo get_option('fb_link'); ?>" /></p>
-            	<p><strong>Youtube Channel ID:</strong><br />(https://www.youtube.com/channel/)<br /><input type="text" name="yt_id" size="45" value="<?php echo get_option('yt_id'); ?>" /></p>
-            <p><input type="submit" name="Submit" value="Store Options" /></p>
-            <input type="hidden" name="action" value="update" />
-            <input type="hidden" name="page_options" value="itunes_link,sc_id,ig_id,twitter_id,fb_link,yt_id" />
-        </form>
-    </div>
-	<?php }
-
-	/* Global Cutom Fields for Site Image Credit */
-	add_action('admin_menu', 'add_image_credit_options');
-	//add_settings_field( 'admin_menu', 'add_image_credit_options');
-
-	function add_image_credit_options() {
-	add_theme_page('Site Image Credit', 'Site Image Credit', 'manage_options', 'imagecredit','image_credit_options');
-	}
-
-	function image_credit_options(){ ?>
- 	 <div class="wrap">
-		<h2>Site Background Image Credit</h2>
-        <form method="post" action="options.php">
-            <?php wp_nonce_field('update-options') ?>
-            	<p><strong>Image Credit Name:</strong><br /><input type="text" name="image_credit_name" size="45" value="<?php echo get_option('image_credit_name') ?>" /></p>
-            	<p><strong>Image Credit Link:</strong><br /><input type="text" name="image_credit_link" size="45" placeholder="http://" value="<?php echo get_option('image_credit_link') ?>" /></p>
-            <p><input type="submit" name="Submit" value="Update Image Credit" /></p>
-            <input type="hidden" name="action" value="update" />
-            <input type="hidden" name="page_options" value="image_credit_name, image_credit_link" />
-        </form>
-  	</div>
-	<?php }
-
 
 	/* Custom Thumbnail Sizes */
 	if ( has_post_thumbnail() ) {
@@ -114,13 +230,6 @@ function CASH_setup() {
 	/* Enable support for Post featured images */
 	add_theme_support( 'post-thumbnails' );
 
-	/* Site Background Image */
-	/*$background = array(
-	'default-color' => '000000',
-	'default-image' => '%1$s/img/background.jpg',
-	);
-
-	add_theme_support( 'custom-background', $background );*/
 
 	add_theme_support( 'custom-background', array( 'wp-head-callback' => 'cash_custom_background' ) );
 

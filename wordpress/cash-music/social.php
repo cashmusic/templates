@@ -1,5 +1,5 @@
 <div class="social">
-        <?php if (get_option('itunes_link') ){ ?><a class="itunes" href="<?php echo get_option('itunes_link')?>" target="_blank"><svg version="1.1" id="iTunes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <?php if ( get_theme_mod('apple_id') ){ ?><a class="itunes" href="<?php echo get_theme_mod('apple_id'); ?>" target="_blank"><svg version="1.1" id="iTunes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   width="217.666px" height="267px" viewBox="0 0 217.666 267" enable-background="new 0 0 217.666 267" xml:space="preserve">
   <g>
   <path d="M0,150.713c0-3.976,0-7.951,0-11.927c0.082-0.577,0.163-1.154,0.247-1.73c0.826-5.66,1.235-11.42,2.557-16.962
@@ -19,7 +19,7 @@
     c8.888-10.029,20.173-15.97,33.12-18.947c1.222-0.281,2.471-0.441,3.708-0.657C160.833,0,161.465,0,162.098,0z"/>
   </g>
   </svg></a><?php } ?>
-        <?php if (get_option('sc_id') ){ ?><a class="soundcloud" href="https://soundcloud.com/<?php echo get_option('sc_id'); ?>" target="_blank"><svg version="1.1" id="soundcloud" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <?php if ( get_theme_mod('soundcloud_id')  ){ ?><a class="soundcloud" href="https://soundcloud.com/<?php echo get_theme_mod('soundcloud_id'); ?>" target="_blank"><svg version="1.1" id="soundcloud" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   width="217.666px" height="96.5px" viewBox="0 0 217.666 96.5" enable-background="new 0 0 217.666 96.5" xml:space="preserve">
   <g>
   <path fill="none" d="M87.992,32.66c0.062-0.07,0.089-0.155,0.107-0.245C88.063,32.497,88.027,32.579,87.992,32.66z"/>
@@ -197,7 +197,7 @@
     C21.053,60.867,20.978,60.848,20.902,60.832z"/>
   </g>
   </svg></a><?php } ?>
-        <?php if (get_option('ig_id') ){ ?><a class="instagram" href="https://instagram.com/<?php echo get_option('ig_id')?>" target="_blank"><svg version="1.1" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <?php if ( get_theme_mod('ig_id') ){ ?><a class="instagram" href="https://instagram.com/<?php echo get_theme_mod('ig_id') ?>" target="_blank"><svg version="1.1" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   width="215.999px" height="217.667px" viewBox="0 0 215.999 217.667" enable-background="new 0 0 215.999 217.667"
   xml:space="preserve">
   <g>
@@ -220,7 +220,7 @@
     C64.625,83.069,86.022,61.936,112.431,62.224z"/>
   </g>
   </svg></a><?php } ?>
-        <?php if (get_option('fb_link') ){ ?><a class="facebook" href="https://www.facebook.com/<?php echo get_option('fb_link')?>" target="_blank"><svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <?php if ( get_theme_mod('facebook_id') ){ ?><a class="facebook" href="https://www.facebook.com/<?php echo get_theme_mod('facebook_id') ?>" target="_blank"><svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
  width="215.999px" height="217.667px" viewBox="0 0 215.999 217.667" enable-background="new 0 0 215.999 217.667"
  xml:space="preserve">
 <g>
@@ -237,7 +237,7 @@
     c-17.114,0.005-34.229,0-51.343,0C149.397,214.637,148.865,214.637,148.245,214.637z"/>
 </g>
 </svg></a><?php } ?>
-        <?php if (get_option('twitter_id') ){ ?><a class="twitter" href="https://twitter.com/<?php echo get_option('twitter_id')?>" target="_blank"><svg version="1.1" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <?php if ( get_theme_mod('twitter_id') ){ ?><a class="twitter" href="https://twitter.com/<?php echo get_theme_mod('twitter_id') ?>" target="_blank"><svg version="1.1" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   width="217.666px" height="178.61px" viewBox="0 0 217.666 178.61" enable-background="new 0 0 217.666 178.61"
   xml:space="preserve">
   <g>
@@ -253,7 +253,7 @@
     c2.248,2.052,4.461,2.697,7.222,1.655c6.199-2.339,12.396-4.685,18.578-7.067C206.572,7.276,208.071,6.529,210.192,5.585z"/>
   </g>
   </svg></a><?php } ?>
-        <?php if (get_option('yt_id') ){ ?><a class="yt" href="https://www.youtube.com/<?php echo get_option('yt_id')?>" target="_blank"><svg version="1.1" id="youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <?php if ( get_theme_mod('youtube_id')){ ?><a class="yt" href="https://www.youtube.com/<?php echo get_option('youtube_id')?>" target="_blank"><svg version="1.1" id="youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   width="217.666px" height="96.5px" viewBox="0 0 217.666 96.5" enable-background="new 0 0 217.666 96.5" xml:space="preserve">
   <g>
   <path fill-rule="evenodd" clip-rule="evenodd" d="M151.877,3.354c15.208,0.586,30.343,1.078,45.468,1.789
