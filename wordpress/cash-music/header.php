@@ -97,9 +97,9 @@ $myposts = get_posts( $args );
 </svg></div><!--scroll-->
 
 <?php wp_reset_postdata();?>
-<?php if (get_option('image_credit_link') ){ ?><a href="<?php echo get_option('image_credit_link') ?>" target="_blank" class="credit"><?php } ?>
-<?php if (get_option('image_credit_name') ){ ?><p><?php echo _e('Background image by', 'cashmusic');  echo get_option('image_credit_name'); ?></p><?php  } ?>
-<?php if (get_option('image_credit_link') ){ ?></a><?php } ?>
+<?php if ( get_theme_mod('background_credit_link') ){ ?><a href="<?php echo get_theme_mod('background_credit_link') ?>" target="_blank" class="credit"><?php } ?>
+<?php if ( get_theme_mod('background_credit_name') ){ ?><p><?php echo _e('Background image by ', 'cashmusic');  echo get_theme_mod('background_credit_name'); ?></p><?php  } ?>
+<?php if ( get_theme_mod('background_credit_link') ){ ?></a><?php } ?>
 </div><!--front-->
 
 <?php } ?>
