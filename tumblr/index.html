@@ -53,6 +53,7 @@
         <meta name="color:Link Background Color" content="#eeeeee" />
         <meta name="if:Splash Page" content="1"/>
         <meta name="image:Splash Background" content="https://secure.static.tumblr.com/dba800c4bbf321e575399088100e6370/6svt24a/0N3o1a5l7/tumblr_static_5qlgrfgmgk4c0gookksgwg0oo.jpg"/>
+        <meta name="if:Splash Landscape" content="0"/>
         <meta name="color:Splash Text Color" content="#252525"/>
         <meta name="if:Show Post Background Color" content="1" />
         <meta name="if:Hide Social Links" content="0"/>
@@ -399,6 +400,11 @@
             }
 
             /* Background Image for Mobile */
+            #front.fallback-landscape-layout{
+                height:50%;
+                height:50vh;
+            }
+
             #front .fallback-container{
                 position:absolute;
                 top: 0;
@@ -412,6 +418,17 @@
              #front .fallback-container .fallback{
                  min-height:100%;
                  width:auto;
+             }
+
+
+             /* Landscape Layout */
+              #front.fallback-landscape-layout .fallback-container{
+                position:relative;
+             }
+
+              #front.fallback-landscape-layout .fallback-container .fallback{
+                width:100%;
+                min-height:initial;
              }
 
 
@@ -516,6 +533,13 @@
                 height:180px;
                 margin:0 auto;
             }
+
+            /* Front feature - landscape */
+
+             #front.fallback-landscape-layout #featured{
+                height:auto;
+                padding:50px 0;
+             }
 
              /* Main Content */
 
@@ -1042,6 +1066,21 @@
 
             p{text-align:left;}
 
+
+            /* Landscape layout reset */
+
+            #front.fallback-landscape-layout{
+                height:100%;
+                height:100vh;
+                width:100%;
+            }
+
+            /* Front feature - landscape layout reset */
+
+             #front.fallback-landscape-layout #featured{
+                height:100vh;
+             }
+
             /* Navigation */
             #menu-primary-outer{
                 width:33%;
@@ -1200,7 +1239,7 @@
     <!--/* Front Page */-->
     {block:IfSplashPage}
     {block:IndexPage}
-    <div id="front"
+    <div id="front" {block:IfSplashLandscape}class="fallback-landscape-layout"{/block:IfSplashLandscape}
     {block:SearchPage}class="hidden"{/block:SearchPage}
     {block:TagPage}class="hidden"{/block:TagPage}>
     <div class="fallback-container"><img class="fallback" src="{image:Splash Background}" alt="Splash Background"/></div><!--fallback-container-->
@@ -1293,24 +1332,14 @@
                         </article>
                     </li>
                 {/block:Panorama}{block:Photoset}
-                    <!--li class="post photoset">
-
-     <article>
-
-
-        {block:Photos}
-            <img src="{PhotoURL-HighRes}" class="highres">
-        {/block:Photos}
--->
 <li class="post photoset">
 <article>
-{Photoset}
+  {block:Photos}
+            <img src="{PhotoURL-HighRes}" class=" {JSPhotosetLayout} highres">
+        {/block:Photos}
 
         {block:Caption}
-            <p>{Caption}</p>
-        {/block:Caption}
-   }{block:Caption}
-                            <div class="caption"><a href="{Permalink}">{Caption}</a></div>
+                            <div class="caption"><p><a href="{Permalink}">{Caption}</a></p></div>
                         {/block:Caption}
 
                         <div class="footer">
@@ -1453,7 +1482,7 @@
                 <a href="{NextPage}">Next</a>
             {/block:NextPage}
         </p>
-                
+
         <div id="signup">
         <!--  /**/ CASH Music Email Capture Widget /**/
 
