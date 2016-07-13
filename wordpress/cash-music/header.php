@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<title><?php wp_title(); ?></title>
 <!-- mobile viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 <meta charset="UTF-8">
@@ -16,6 +15,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() )  . '/js/sticky.js'; ?>"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() )  . '/js/main.js'; ?>"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() )  . '/js/cashmusic.js'; ?>"></script>
 
     <!--favicon-->
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
@@ -76,7 +76,7 @@ $myposts = get_posts( $args );
   <div class="inner">
     <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 	     <div class="post entry <?php echo $format = get_post_format( $post_id ); ?>">
-	         <h4><a href="<?php the_permalink() ?>" rel="bookmark"><?php echo _e('Posted on', 'cashmusic'); the_time('F jS, Y') ?></a></h4>
+	         <h4><a href="<?php the_permalink() ?>" rel="bookmark"><?php echo _e('Posted on', 'cash-music'); the_time('F jS, Y') ?></a></h4>
 	           <h1><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		           <?php the_content();  ?>
 	     </div><!--post-->
@@ -98,7 +98,7 @@ $myposts = get_posts( $args );
 
 <?php wp_reset_postdata();?>
 <?php if ( get_theme_mod('background_credit_link') ){ ?><a href="<?php echo get_theme_mod('background_credit_link') ?>" target="_blank" class="credit"><?php } ?>
-<?php if ( get_theme_mod('background_credit_name') ){ ?><p><?php echo _e('Background image by ', 'cashmusic');  echo get_theme_mod('background_credit_name'); ?></p><?php  } ?>
+<?php if ( get_theme_mod('background_credit_name') ){ ?><p><?php echo _e('Background image by ', 'cash-music');  echo get_theme_mod('background_credit_name'); ?></p><?php  } ?>
 <?php if ( get_theme_mod('background_credit_link') ){ ?></a><?php } ?>
 </div><!--front-->
 
