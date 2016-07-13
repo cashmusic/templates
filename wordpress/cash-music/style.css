@@ -1,6 +1,6 @@
 /*
 Theme Name: Cash Music
-Theme URI: http://wordpress.org/themes/cashmusic
+Theme URI: https://github.com/cashmusic/templates/tree/master/wordpress/cash-music
 Author: Christopher Leckie
 Author URI: http://cashmusic.org
 Description: Basic CASH Music Wordpress theme, showcasing CASH Music embedable functionality. CASH Music is a nonprofit organization focused on educating and empowering artists and their fans to foster a viable and sustainable future for music. We believe the best way to ensure a sustainable future for music is to invest in its creators.
@@ -8,7 +8,8 @@ Description: Basic CASH Music Wordpress theme, showcasing CASH Music embedable f
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: two-columns, light, featured-images, responsive-layout
+Tags: entertainment, two-columns, featured-images, custom-background
+Text Domain: cash-music
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
@@ -144,6 +145,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
             #wrapper{
                 margin:0 auto;
+                position: relative;
             }
 
             .size-auto,
@@ -170,7 +172,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 position:fixed;
                 top:0;
                 left:0;
-                z-index:200;
+                /*z-index:200;*/
                 width:100%;
                 -webkit-transition: 0.3s  ease-in-out;
                 -moz-transition: 0.3s  ease-in-out;
