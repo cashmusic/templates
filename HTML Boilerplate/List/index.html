@@ -23,51 +23,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <link rel="apple-touch-icon" href="https://static-cashmusic.netdna-ssl.com/www/apple-touch-icon.png">
   <link rel="shortcut icon" href="https://static-cashmusic.netdna-ssl.com/www/favicon.png" type="image/png">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito:300,400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/hk-grotesk" type="text/css"/>
   <link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/list.css">
+	<script type="text/javascript" src="https://cashmusic.org/public/cashmusic.js"></script>
 	<title>Your Website</title>
 </head>
 
 <body>
-	<header role="banner">
-		<nav id="nav" class="collapsed">
-			<div id="menutoggle"><span></span><span></span><span></span></div><!--menu-toggle-->
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#news">News</a></li>
-        <li><a href="#tour">Tour</a></li>
-				<li><a href="#videos">Video</a></li>
-        <li><a href="#store">Store</a></li>
-			</ul>
-		</nav>
-		<h1 class="logo">Artist Name / Logo</h1>
+
+<div id="wrapper">
+	<header id="home" role="banner">
+			<h1 class="logo">List - Theme</h1>
+
+			<div class="hero">
+			</div><!--hero-->
 	</header>
+
+<div class="nav">toggled content</div>
 
 <main role="main">
 	<section>
-		<article id="home">
-			<header>
-				<h2>Email 4 Download</h2>
-				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">July 18th 2016</time> by <a href="#">Writer</a></p>
-			</header>
-			<script src="https://cashmusic.org/public/cashmusic.js" data-element="9876"></script>
+		<h2 class="menutoggle">Join Mailinglist</h2>
+		<article draggable="true" class="resizable">
+						<script type="text/javascript">
+							window.cashmusic.embed(
+								{
+									endpoint: 'http://cashmusic.org/public/',
+									elementid: '9876',
+									cssoverride: 'https://work.christopherleckie.com/cash/elements/override/static-elements.css'
+								}
+							);
+						</script>
 		</article>
-
-
-		<section id="news">
-
-			<article>
-				<header>
-					<h2>News story</h2>
+		<hr />
+		<h2>Latest News</h2>
+			<article id="news">
+					<header>
+					<h2>News</h2>
 					<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">July 18th 2016</time> by <a href="#">Writer</a></p>
-				</header>
-				<img src="img/photo-1466939721550-ad3ef4b9eeec.jpg" />
+  			</header>
 				<h3>Welcome to the CASH Music boilerplate. Nice huh!</h3>
 				<p>This is a place for you to experiment and have fun with CASH embeds.</p> <p>It's really easy to get started with a little copy and pastin'</p>
-			</article>
+			</article><!--news-->
 
-		</section><!--news-->
-
+		<hr />
+		<h2>Video</h2>
 		<article id="videos">
  		 <header>
  			 <h2>Videos</h2>
@@ -77,25 +79,44 @@
 		 <div class="aspect-ratio">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/fyKwXTEW3cc" frameborder="0" allowfullscreen></iframe>
 		</div><!--aspect-ratio-->
- 		 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+ 		 <p>Directed by: <em>Director</em>, Produced by: <em>Producer</em></p>
  	 </article>
 
+	 	<hr />
+		<h2>Tour</h2>
 	 <article id="tour">
 		 <header>
 			 <h2>Tour Dates</h2>
-			 <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">July 18th 2016</time> by <a href="#">Writer</a></p>
 		 </header>
 		 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		 <script src="https://cashmusic.org/public/cashmusic.js" data-element="5342"></script>
+
+		 <script type="text/javascript">
+			 window.cashmusic.embed(
+				 {
+					 endpoint: 'https://cashmusic.org/public/',
+					 elementid: '5342',
+					 cssoverride: 'https://work.christopherleckie.com/cash/elements/override/static-elements.css'
+				 }
+			 );
+		 </script>
 	 </article>
 
+	 		<hr />
+		<h2>Store</h2>
 		<article id="store">
 			<header>
 				<h2>Store</h2>
-				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">July 18th 2016</time> by <a href="#">Writer</a></p>
-				<script src="https://cashmusic.org/public/cashmusic.js" data-element="9061"></script>
+				<p>Please help support us by buying a shirt!</p>
 			</header>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			<script type="text/javascript">
+				window.cashmusic.embed(
+					{
+						endpoint: 'http://cashmusic.org/public/',
+						elementid: '9061',
+						cssoverride: 'https://work.christopherleckie.com/cash/elements/override/static-elements.css'
+					}
+				);
+			</script>
 		</article>
 
 	</section>
@@ -416,7 +437,8 @@ width="217.666px" height="96.5px" viewBox="0 0 217.666 96.5" enable-background="
 		<p><a href="http://cashmusic.org/" target="_blank">Made with ♡ by CASH Music. Nonprofit, Open-source &amp; Free forever.</a></p>
 	</footer>
 
-<script src="js/main.js"></script>
+</div><!--content-->
+<!-- script src="../js/main.js"></script -->
 
 <!-- Google Analytics -->
 <script>
