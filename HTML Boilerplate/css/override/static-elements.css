@@ -1,0 +1,79 @@
+/* CASH Embed override styles */
+
+
+#mainspc{
+  background: transparent;
+  color:#fff;
+  font-family: 'Fjalla One', sans-serif;
+  padding:0;
+  overflow: hidden;
+}
+
+
+.singlepurchase .cash_singlepurchase_itemprice, .cash_notation, .cash_comments, .singlepurchase .cash_singlepurchase_itemdescription{
+  color:#fff;
+}
+
+.cashmusic.element input, .cashmusic.element select{
+    background-color:rgba(0,0,0,0.5);
+    color:#fff;
+    border:none;
+}
+
+.cashmusic.element input{
+  padding:20px;
+}
+
+/* tour dates */
+
+.tourdates .cash_event, .tourdates .cash_event:nth-child(even), .tourdates .cash_event:nth-child(odd){
+  background:none;
+  border:none;
+  color: #fff;
+  border-radius: 0;
+  background:rgba(0,0,0,0.1);
+}
+
+
+.tourdates .cash_timeandplace{
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.tourdates .cash_date{
+  font-size: 30px;
+  display: block;
+}
+
+.tourdates .cash_location{
+  font-size: 20px;
+  padding-left:0;
+}
+
+/* Store override */
+.cm-store.cm-front{
+  max-width:none;
+  height:auto;
+}
+
+
+.cm-grid .cm-store.unfeatured-items {
+  height:100%;
+    background:rgba(0,0,0,0.1);
+}
+
+.cm-grid .cm-store.unfeatured-items .cm-item:nth-child(odd){
+}
+
+
+.cm-store.cm-front{
+  width:100%;
+}
+
+.cm-store .cm-showcart{
+  color:#fff;
+}
+
+.cm-store .cm-showcart svg{
+  fill:#fff!important;
+}
