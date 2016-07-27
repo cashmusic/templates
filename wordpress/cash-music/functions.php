@@ -1,6 +1,7 @@
 <?php
 /**
- * @package CASH Music
+* @package WordPress
+* @subpackage Cash Music
  */
 
 if ( ! function_exists( 'CASH_setup' ) ) :
@@ -20,7 +21,7 @@ function CASH_setup() {
 	 * If you're building a theme based on Beach, use a find and replace
 	 * to change 'beach' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'cashmusic', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'cash-music', get_template_directory() . '/languages' );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -37,8 +38,8 @@ function CASH_setup() {
 	 * This theme uses wp_nav_menu() in two locations.
 	 */
 	register_nav_menus( array(
-		'primary'   => __( 'Primary Menu',   'cashmusic' ),
-		'secondary' => __( 'Secondary Menu', 'cashmusic' ),
+		'primary'   => __( 'Primary Menu',   'cash-music' ),
+		'secondary' => __( 'Secondary Menu', 'cash-music' ),
 	) );
 
 	// Filter wp_nav_menu() to add additional links and other output
@@ -59,47 +60,53 @@ function cashmusic_options( $wp_customize ) {
 // Social Options Section
 $wp_customize->add_section('cashmusic_social_options',
 	array(
-		'title'       => __( 'Social Links', 'cashmusic' ),
+		'title'       => __( 'Social Links', 'cash-music' ),
 		'priority'    => 80,
 		'capability'  => 'edit_theme_options',
-		'description' => __('Change sidebar social IDs', 'cashmusic'),
+		'description' => __('Change sidebar social IDs', 'cash-music'),
 	)
 );
 
 // Social Option Default Settings
 $wp_customize->add_setting( 'apple_id',
 	array(
-		'default' => 'https://itunes.apple.com/us/album/hurry-up/id1018976531'
+		'default' => 'https://itunes.apple.com/us/album/hurry-up/id1018976531',
+		'sanitize_callback' => 'esc_url_raw'
 	)
 );
 
 $wp_customize->add_setting( 'soundcloud_id',
 	array(
-		'default' => 'leckieeeeeeeeeeeeeeeeeee'
+		'default' => 'leckieeeeeeeeeeeeeeeeeee',
+		'sanitize_callback' => 'esc_html'
 	)
 );
 
 $wp_customize->add_setting( 'ig_id',
 	array(
-		'default' => 'cashmusic'
+		'default' => 'cashmusic',
+		'sanitize_callback' => 'esc_html'
 	)
 );
 
 $wp_customize->add_setting( 'facebook_id',
 	array(
-		'default' => 'cashmusic.org'
+		'default' => 'cashmusic.org',
+		'sanitize_callback' => 'esc_html'
 	)
 );
 
 $wp_customize->add_setting( 'twitter_id',
 	array(
-		'default' => 'cashmusic'
+		'default' => 'cashmusic',
+		'sanitize_callback' => 'esc_html'
 	)
 );
 
 $wp_customize->add_setting( 'youtube_id',
 	array(
-		'default' => 'cashmusicorg'
+		'default' => 'cashmusicorg',
+		'sanitize_callback' => 'esc_html'
 	)
 );
 
@@ -109,7 +116,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	$wp_customize,
 	'apple_social_control',
 		array(
-			'label'    => __( 'Apple ID', 'cashmusic' ),
+			'label'    => __( 'Apple ID', 'cash-music' ),
 			'section'  => 'cashmusic_social_options',
 			'settings' => 'apple_id',
 			'priority' => 10,
@@ -120,7 +127,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	$wp_customize,
 	'soundcloud_social_control',
 		array(
-			'label'    => __( 'Soundcloud ID', 'cashmusic' ),
+			'label'    => __( 'Soundcloud ID', 'cash-music' ),
 			'section'  => 'cashmusic_social_options',
 			'settings' => 'soundcloud_id',
 			'priority' => 10,
@@ -131,7 +138,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	$wp_customize,
 	'ig_social_control',
 			array(
-				'label'    => __( 'Instagram ID', 'cashmusic' ),
+				'label'    => __( 'Instagram ID', 'cash-music' ),
 				'section'  => 'cashmusic_social_options',
 				'settings' => 'ig_id',
 				'priority' => 10,
@@ -142,7 +149,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	$wp_customize,
 	'facebook_social_control',
 			array(
-				'label'    => __( 'Facebook ID', 'cashmusic' ),
+				'label'    => __( 'Facebook ID', 'cash-music' ),
 				'section'  => 'cashmusic_social_options',
 				'settings' => 'facebook_id',
 				'priority' => 10,
@@ -153,7 +160,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 		$wp_customize,
 		'twitter_social_control',
 			array(
-				'label'    => __( 'Twitter ID', 'cashmusic' ),
+				'label'    => __( 'Twitter ID', 'cash-music' ),
 				'section'  => 'cashmusic_social_options',
 				'settings' => 'twitter_id',
 				'priority' => 10,
@@ -164,7 +171,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 		$wp_customize,
 		'youtube_social_control',
 			array(
-				'label'    => __( 'Youtube ID', 'cashmusic' ),
+				'label'    => __( 'Youtube ID', 'cash-music' ),
 				'section'  => 'cashmusic_social_options',
 				'settings' => 'youtube_id',
 				'priority' => 10,
@@ -177,22 +184,24 @@ $wp_customize->add_control( new WP_Customize_Control(
 		// Background Image Credit
 		$wp_customize->add_section('cashmusic_background_credit',
 			array(
-				'title'       => __( 'Background Image Credit', 'cashmusic' ),
+				'title'       => __( 'Background Image Credit', 'cash-music' ),
 				'priority'    => 60,
 				'capability'  => 'edit_theme_options',
-				'description' => __('Change sidebar social IDs', 'cashmusic'),
+				'description' => __('Change sidebar social IDs', 'cash-music'),
 			)
 		);
 
 		$wp_customize->add_setting( 'background_credit_name',
 			array(
-				'default' => 'Davy Evans'
+				'default' => 'Davy Evans',
+				'sanitize_callback' => 'esc_html'
 			)
 		);
 
 		$wp_customize->add_setting( 'background_credit_link',
 			array(
-				'default' => 'http://davyevans.co.uk/'
+				'default' => 'http://davyevans.co.uk/',
+				'sanitize_callback' => 'esc_url_raw'
 			)
 		);
 
@@ -200,7 +209,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 			$wp_customize,
 			'credit_name',
 				array(
-					'label'    => __( 'Name', 'cashmusic' ),
+					'label'    => __( 'Name', 'cash-music' ),
 					'section'  => 'cashmusic_background_credit',
 					'settings' => 'background_credit_name',
 					'priority' => 10,
@@ -211,7 +220,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 			$wp_customize,
 			'credit_link',
 				array(
-					'label'    => __( 'Link', 'cashmusic' ),
+					'label'    => __( 'Link', 'cash-music' ),
 					'section'  => 'cashmusic_background_credit',
 					'settings' => 'background_credit_link',
 					'priority' => 10,

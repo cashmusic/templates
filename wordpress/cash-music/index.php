@@ -1,6 +1,9 @@
 <?php
 /**
  * Site Index
+
+ * @package WordPress
+ * @subpackage Cash Music
  */ ?>
 
  <?php get_header(); ?>

@@ -2,8 +2,8 @@
 <aside id="sidebar">
 	<section>
 	<!-- Mailing List -->
-	<h2><?php echo _e('Mailing List', 'cashmusic'); ?></h2>
-		<script type="text/javascript" src="https://cashmusic.org/public/cashmusic.js"></script><script type="text/javascript"> window.cashmusic.embed('https://cashmusic.org/public','6867');</script>
+	<h2><?php echo _e('Mailing List', 'cash-music'); ?></h2>
+	<script type="text/javascript"> window.cashmusic.embed('https://cashmusic.org/public','6867');</script>
 	</section>
 	<!-- Catagories -->
 	<section>
@@ -11,7 +11,7 @@
 	</section>
 	<!-- Archives -->
 	<section>
-	<h2 ><?php echo _e('Archives', 'cashmusic'); ?></h2>
+	<h2 ><?php echo _e('Archives', 'cash-music'); ?></h2>
 	<ul >
 	<?php wp_get_archives('type=monthly'); ?>
 	</ul>

@@ -35,5 +35,5 @@
 <div class="pagination"><p><?php posts_nav_link( ' ', 'Prev', 'Next' ); ?></p></div>
 <?php else: ?>
 <!-- No Posts -->
-<p><?php echo _e('Sorry, there is no news posted yet!', 'cashmusic'); ?></p><?php endif; ?>
+<p><?php echo _e('Sorry, there is no news posted yet!', 'cash-music'); ?></p><?php endif; ?>
 <?php get_footer(); ?>
