@@ -108,6 +108,12 @@ background-blend-mode:exclusion;
 main[role="main"]{
   padding:30px 0;
   width:100%;
+  display: table;
+}
+
+main[role="main"] section{
+  display: table-cell;
+  vertical-align: middle;
 }
 
 article{

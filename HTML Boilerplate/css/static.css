@@ -11,7 +11,7 @@ nav{
   height:100vh;
   width:25%;
   background:#333;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.6);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -96,7 +96,7 @@ display: block;
   left:0;
   height:100%;
   width:100%;
-  background: url(../img/northern-lights.jpg);
+  background: url(../img/building.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -108,11 +108,11 @@ z-index: -100;
 }
 
 .bg-fixed.blurred{
-  -webkit-filter: blur(10px);
--moz-filter: blur(10px);
--o-filter: blur(10px);
--ms-filter: blur(10px);
-filter: blur(10px);
+  -webkit-filter: blur(50px);
+-moz-filter: blur(50px);
+-o-filter: blur(50px);
+-ms-filter: blur(50px);
+filter: blur(50px);
 }
 
 /* Hero */

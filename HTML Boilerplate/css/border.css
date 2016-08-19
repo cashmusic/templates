@@ -1,0 +1,226 @@
+html,body{
+  margin:0;
+  padding:0;
+}
+
+html {
+    height:100%;
+    width:100%;
+    font-size: 1em;
+    line-height: 1.4;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  color:#7f7f7f;
+  background-color:#000;
+  height:100vh;
+  text-align: center;
+  border:solid 40px rgba(17,17,17,1);
+  border-bottom: none;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+h1,h2,h3{
+  font-weight: 100;
+  margin:0;
+  text-transform: uppercase;
+}
+
+a{
+    color:#7f7f7f;
+}
+
+a, h1, h2{-webkit-transition: 0.3s  ease-in-out;
+	transition: 0.3s  ease-in-out;}
+
+h1{
+  text-transform: uppercase;
+}
+
+.playback-title{
+  position: fixed;
+  top:0;
+  left:50%;
+  margin:8px 0 0 -100px;
+  opacity: 0;
+  font-size: 20px;
+  color:#fff;
+  width:200px;
+}
+
+.np .playback-title{
+  opacity: 1;
+}
+
+#content{
+  width:70%;
+  margin:-40px auto 0 auto;
+  height:100%;
+  display: table;
+}
+
+#content .inner{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  z-index: 500;
+}
+
+#content h1{
+  color:#fff;
+  font-weight: 100;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.np #content h1, .np #content h2{
+  opacity: 0;
+  pointer-events: none;
+}
+
+#playback{
+  height:100vh;
+  width:100%;
+  background-color:#000;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: -100;
+}
+
+.cashmusic.embed.link{
+  position: absolute;
+  bottom:50px;
+  left:50%;
+  padding:10px 0;
+  margin:0 0 0 -50px;
+  width:100px;
+  background:#000;
+}
+
+@keyframes nope {
+	 0% { transform: opacity(0) scale(30) translateX(200000px) rotate(18930deg) rotateX(1230deg) rotateY(1360deg) blur(20)}
+   25% { transform: translateX(-5px) }
+   50% { transform: translateX(5px) rotateX(90deg) }
+   100% {transform: opacity(1) scale(3) translateX(870px) rotateY(720deg)  rotateX(720deg) blur(0)}
+}
+
+.np #playback {
+  background-image:url(../img/head.gif);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  animation-duration: 30ms;
+	animation-timing-function: ease-in-out;
+	animation-name: nope;
+  animation-iteration-count: infinite;
+}
+
+#noise{
+  height:100vh;
+  width:100%;
+  background: url(../img/noise.png);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 500;
+  opacity: 0.25;
+}
+
+.np #noise{
+}
+
+footer{
+  position: fixed;
+  bottom:0;
+  left:0;
+  background:rgba(17,17,17,1);
+  width:100%;
+  height:40px;
+}
+
+.bjork{
+    background: url(../img/bjork.png) no-repeat 50% 50%;
+    background-size: 100%;
+    text-indent: -5000px;
+    width:100px;
+    display: inline-block;
+}
+
+footer .bjork{
+  width:80px;
+}
+
+footer h2{
+  font-size: 20px;
+  opacity: 0;
+  margin:6px 0 0 0;
+}
+
+.np footer h2{
+  opacity: 1;
+}
+
+/* Player */
+
+#haxan-player{
+  text-indent: -5000em;
+  display: inline-block;
+  margin:-20px 0 0 0;
+  height:30px;
+  width:30px;
+  background-image:url('../img/play.svg');
+  background-size: 100%;
+  border:none;
+}
+
+.np #haxan-player{
+  background-image:url('../img/stop.svg');
+  background-size: 100%;
+}
+
+#player-progress-container{
+  width:80%;
+  display: inline-block;
+  height:1px;
+  background:rgba(255,255,255,0.2);
+  margin:10px 30px;
+  position: relative;
+}
+
+#player-progress-inner{
+  background:#fff;
+  height:1px;
+  position: absolute;
+  top:0;
+  left:0;
+  width:0%;
+}
+
+#tc{
+  display: inline-block;
+  color:#fff;
+  vertical-align:sub;
+  vertical-align: middle;
+  font-size: 24px;
+}
+
+/* Larger Displays */
+
+@media screen and (min-width: 48em) {
+
+  #player-progress-container{
+    margin:0 30px;
+  }
+
+}
