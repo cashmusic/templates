@@ -4,41 +4,23 @@
 <!-- mobile viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 <meta charset="UTF-8">
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    <!--<![endif]-->
-    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ) . '/cm_icons.css'; ?>">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() )  . '/js/sticky.js'; ?>"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() )  . '/js/main.js'; ?>"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() )  . '/js/cashmusic.js'; ?>"></script>
-
     <!--favicon-->
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
-    <!--droid-->
-    <meta name="theme-color" content="#252525">
-    <!--Slick-->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
-
-    <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Playfair+Display|Montserrat:400,700|Nunito:300,400,700" rel="stylesheet" type="text/css">
-
-    <?php
-    if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
+  <?php  if ( ! ( function_exists( 'has_site_icon' ) && has_site_icon() ) ) { ?>
+  // Output custom favion
+  <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
+  <?php }  ?>
+  <!--droid-->
+  <meta name="theme-color" content="#252525">
+  <?php
+  if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
     wp_head();
-    ?>
-
+  ?>
 </head>
 <?php $post_id = ""; $format = get_post_format( $post_id ); ?>
 <body   <?php body_class(); ?> >
 <div id="wrapper" class="pure-g <?php if ( is_single() ) echo 'single-post'; ?>">
+  <a class="logo" href="<?php echo home_url() ?>"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/img/logo.png'; ?>" alt="<?php bloginfo('name'); ?>" /></a>
 <header>
-<a class="logo" href="<?php echo home_url() ?>"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/img/logo.png'; ?>" alt="<?php bloginfo('name'); ?>" /></a>
 
     <h1><?php bloginfo('name'); ?></h1>
     <p id="description"><?php bloginfo('description'); ?></p>

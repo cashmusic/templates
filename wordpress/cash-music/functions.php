@@ -23,6 +23,37 @@ function CASH_setup() {
 	 */
 	load_theme_textdomain( 'cash-music', get_template_directory() . '/languages' );
 
+
+	/* Enqueue Additional Scripts */
+
+	add_action( 'wp_enqueue_scripts', 'cashmusic_theme_enqueue_styles' );
+	function cashmusic_theme_enqueue_styles() {
+		
+	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+	if(preg_match('/(?i)msie [8]/',$_SERVER['HTTP_USER_AGENT'])){
+    // if IE<=8
+		wp_enqueue_style( 'grid-style', get_template_directory_uri() . '/css/grids-responsive-old-ie-min.css');
+	}
+	wp_enqueue_style( 'grid-style', get_template_directory_uri() . '/css/grids-responsive-min.css');
+	wp_enqueue_style( 'carousel-style', get_template_directory_uri() . '/css/slick.css');
+
+  wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/jquery.min.js'); 
+	wp_enqueue_script( 'cashmusic-script', get_template_directory_uri() . '/js/cashmusic.js');
+	wp_enqueue_script( 'sticky-script', get_template_directory_uri() . '/js/sticky.js');
+	wp_enqueue_script( 'carousel-script', get_template_directory_uri() . '/js/slick.js');
+	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js');
+
+	}
+	
+	function cashmusic_remove_cssjs_ver( $src ) {
+    if( strpos( $src, '?ver=' ) )
+        $src = remove_query_arg( 'ver', $src );
+    return $src;
+}
+add_filter( 'style_loader_src', 'cashmusic_remove_cssjs_ver', 10, 2 );
+add_filter( 'script_loader_src', 'cashmusic_remove_cssjs_ver', 10, 2 );
+	
+
 	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
@@ -43,12 +74,12 @@ function CASH_setup() {
 	) );
 
 	// Filter wp_nav_menu() to add additional links and other output
-	function new_nav_menu_items($items) {
+	function cashmusic_new_nav_menu_items($items) {
 	$homelink = '<li class="home"><a href="' . home_url( '/' ) . '">' . 'Home' . '</a></li>';
 	$items = $homelink . $items;
 	return $items;
 	}
-	add_filter( 'wp_nav_menu_items', 'new_nav_menu_items' );
+	add_filter( 'wp_nav_menu_items', 'cashmusic_new_nav_menu_items' );
 
 
 /* CASH Customisable content */
@@ -240,10 +271,10 @@ $wp_customize->add_control( new WP_Customize_Control(
 	add_theme_support( 'post-thumbnails' );
 
 
-	add_theme_support( 'custom-background', array( 'wp-head-callback' => 'cash_custom_background' ) );
+	add_theme_support( 'custom-background', array( 'wp-head-callback' => 'cashmusic_custom_background' ) );
 
 /*  Custom background callback. */
-	function cash_custom_background() {
+	function cashmusic_custom_background() {
     // $background is the saved custom image, or the default image.
     $background = set_url_scheme( get_background_image() );
 
@@ -289,7 +320,7 @@ add_action( 'after_setup_theme', 'CASH_setup' );
 
 
 /* Preserve Aspect Ratio of iframes in Posts */
-function preserveRatio( $content ) {
+function cashmusic_preserveRatio( $content ) {
    // A regular expression of what to look for.
    $pattern = '/(<iframe([^2]*)iframe>)/i';
    // What to replace it with. $1 refers to the content in the first 'capture group', in parentheses above
@@ -305,6 +336,6 @@ function preserveRatio( $content ) {
    return $content;
 }
 
-add_filter( 'the_content', 'preserveRatio' );
+add_filter( 'the_content', 'cashmusic_preserveRatio' );
 
 ?>

@@ -13,10 +13,14 @@ Text Domain: cash-music
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+/* Fonts */
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Nunito:300';
+
             html{
                 width:100%;
                 height:100%;
-                margin:0;
+                margin:0!important;
                 padding:0;
                 box-sizing: border-box;
             }
@@ -28,6 +32,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
             body {
                 width:100%;
                 height:100%;
+                height:100vh;
                 margin:0;
                 padding:0;
                 background-color: #ddd;
@@ -42,7 +47,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 font-size:0.96em;
                 text-align:left;
                 color:#252525;
-                height:100%;
                 position:relative;
                 transition: 0.3s ease-in-out;
                 -webkit-transition: 0.3s  ease-in-out;
@@ -157,12 +161,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
                height: auto;
             }
 
-            .wp-caption{}
-            .wp-caption-text{}
-            .sticky{}
-            .screen-reader-text{}
-            .gallery-caption{}
-            .bypostauthor{}
+            .wp-caption{max-width: 100%;}
+            .wp-caption-text{max-width: 100%;}
+            .sticky{max-width: 100%;}
+            .screen-reader-text{max-width: 100%;}
+            .gallery-caption{max-width: 100%;}
+            .bypostauthor{max-width: 100%;}
 
 
             /* Site Header */
@@ -210,7 +214,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
             /* Logo */
 
-            header .logo{
+            .logo{
                 position:fixed;
                 top: 0;
                 left: 0;
@@ -221,14 +225,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 transition:0.3s ease-in-out;
                 margin:30px 0 30px 20px;
                 background:transparent;
-                z-index: 200;
+                z-index: 100;
             }
 
-            header .logo img{
+            .logo img{
                 width:auto;
                 height:70px;
                 display:block;
                 background:transparent;
+            }
+            
+            html #wpadminbar{
+              position: fixed;
+              top:0;
             }
 
             /* Main Navigation */
@@ -353,7 +362,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             }
              .shownav #menu-primary-outer{
-                right:0%;
+                right:-1px;
             }
 
             .menu-primary-container{
@@ -403,6 +412,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 height:0%;
                 height:0vh;
                 width:100%;
+                position: relative;
                 -webkit-transition: 0.3s  ease-in-out;
                 -moz-transition: 0.3s  ease-in-out;
                 transition:0.3s ease-in-out;
@@ -422,6 +432,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 margin:0 0 0 -20px;
                 height:40px;
                 width:40px;
+                display: none;
             }
 
             #front .scroll svg{
@@ -656,9 +667,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 padding:130px 0 0 0;
                 overflow:hidden;
             }
-
+          
             .logged-in.admin-bar #main{
-                overflow:visible;
+              /*position: absolute;
+              top:0;
+              left:0;
+              padding:0;*/
+              overflow:visible;
             }
 
             #main .inner{
@@ -892,6 +907,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
             #wrapper #main .social{
                 display:block;
+                margin: 36px 0 0 0;
             }
 
             /* Search */
@@ -1272,6 +1288,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 margin:20px 0;
             }
 
+            footer .byline{
+              display: inline-block;
+              margin: 50px 0 0 0;
+              opacity: 0.6;
+            }
 
             /* ==========================================================================
             Media Queries
@@ -1296,8 +1317,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 padding:50px 30px;
             }
 
-            header .logo{
-
+            .logo{
                 margin:30px 0 0 30px;
             }
 
