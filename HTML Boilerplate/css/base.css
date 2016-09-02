@@ -1,3 +1,5 @@
+* { margin:0 padding:0 }
+
 html{
   padding:0;
   margin:0;
@@ -6,7 +8,7 @@ html{
   line-height: 1.4;
   text-align: left;
   overflow: hidden;
-  overflow-y: scroll; /* has to be scroll, not auto */
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -342,8 +344,7 @@ aside{
   display: inline-block;
   text-indent:5000px;
   text-align: center;
-  height:60px;
-  width:60px;
+  padding:20px;
   border:solid 1px rgba(0,0,0,0.1);
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -353,7 +354,6 @@ aside{
 .social-links a svg{
   width:20px;
   height:20px;
-  padding:20px;
   display: block;
   vertical-align: middle;
 }
