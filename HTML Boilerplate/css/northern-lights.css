@@ -10,21 +10,22 @@ html{
   padding:0;
   width:100%;
   height:100%;
- overflow: hidden;
-  overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+  overflow-x: hidden!important;
+}
 
 #menutoggle{
   position: fixed;
   opacity: 1;
   margin:0;
   pointer-events: all;
-  width:40px;
+  width:30px;
   top:30px;
-  left:20px;
+  left:30px;
 }
 
 nav{
@@ -44,7 +45,7 @@ nav{
   background-size: cover;
   background-size: 100%;
   background-attachment: fixed;
-
+  z-index: 1;
 }
 
 nav.collapsed{
@@ -84,6 +85,7 @@ a{
 
 
 header[role=banner]{
+  background:none;
   height:100vh;
   position: relative;
 }
@@ -91,10 +93,11 @@ header[role=banner]{
 header[role=banner] .logo{
   height:auto;
   width:100%;
-  margin:20px 60px;
+  margin:20px 0px;
   padding:0;
-  font-size: 30px;
-  text-align: left;
+  letter-spacing: 20px;
+  font-size: 20px;
+  text-align: center;
   text-transform: uppercase;
   position: absolute;
   top:0;
@@ -105,7 +108,7 @@ header[role=banner] .logo{
   height:85px;
   width:100vh;
   text-align: center;
-  font-size: 50px;
+  font-size: 20px;
   margin:0;
   line-height:85px;
   position: fixed;
@@ -153,6 +156,31 @@ display: block;
   background-color:rgba(0,0,0,0.3);
 }
 
+/* Signup form */
+
+header[role=banner] .cashmusic.embed.link{
+  /*position:fixed;
+  top:30px;
+  left:15px;*/
+  text-align: center;
+  width:200px;
+  margin:0 auto;
+  display: inline-block;
+  z-index: 200;
+}
+
+header[role=banner] .cashmusic.embed.link a{
+  text-decoration: none;
+  border:solid 5px #fff;
+  padding:20px 50px;
+  margin:36px 0;
+  display: inline-block;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+}
+
+
+
 /* Background Image*/
 
 .bg-fixed{
@@ -192,7 +220,7 @@ width: 500px;
 height:500px;
 padding:0;
 text-transform: uppercase;
-text-align: justify;
+text-align: center;
 }
 
 .hero h1{
@@ -245,7 +273,7 @@ main[role="main"]{
   max-width:none;
   color:#fff;
   padding:30px 0;
-  width:100%;
+  width:auto;
   -webkit-transition: 0.3s  ease-in-out;
   transition: 0.3s  ease-in-out;
 }
@@ -254,6 +282,7 @@ article{
   width:80%;
   text-align: left;
   padding:15px;
+  border:none;
 }
 
 article:before{

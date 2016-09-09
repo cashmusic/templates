@@ -127,6 +127,7 @@ div.cashmusic.soundplayer.playlist.container{
   bottom:0;
   background:rgba(0,0,0,0.6);
   padding:30px 30px 20px 30px;
+  text-align: left;
 }
 
 div.cashmusic.soundplayer.playlist.toggletracklist{
