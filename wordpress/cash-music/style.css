@@ -235,10 +235,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
                 background:transparent;
             }
             
-            html #wpadminbar{
-              position: fixed;
-              top:0;
-            }
+      
 
             /* Main Navigation */
 
