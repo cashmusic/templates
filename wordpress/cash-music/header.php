@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
     <!--favicon-->
   <?php  if ( ! ( function_exists( 'has_site_icon' ) && has_site_icon() ) ) { ?>
-  // Output custom favion
+  <!-- Output custom favion-->
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
   <?php }  ?>
   <!--droid-->
