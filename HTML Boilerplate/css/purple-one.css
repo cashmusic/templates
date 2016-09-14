@@ -26,11 +26,12 @@ h1,h2,h3,h4,h5,h6{
   font-style: normal;
 }
 
+
 header[role=banner] .logo {
   position: fixed;
   top:0;
   left:0;
-  font-size: 72px;
+  font-size: 17px;
   padding:0;
   margin:0;
 }
@@ -101,6 +102,7 @@ background-blend-mode:exclusion;
   width:75%;
   max-width: 800px;
   margin:0 auto;
+  display: table;
   padding:0;
 }
 
@@ -108,23 +110,26 @@ background-blend-mode:exclusion;
 main[role="main"]{
   padding:30px 0;
   width:100%;
-  display: table;
-}
-
-main[role="main"] section{
   display: table-cell;
   vertical-align: middle;
 }
 
+main[role="main"] section{
+  
+}
+
 article{
   padding:15px;
-  backgrund: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.1);
   border:solid 1px rgba(0,0,0,0.2);
   height:0;
   opacity: 0;
   pointer-events: none;
   padding: 0;
   margin:0;
+  position: fixed;
+  top:0;
+  left:0;
 }
 
 
