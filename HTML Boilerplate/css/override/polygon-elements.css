@@ -1,0 +1,95 @@
+/* CASH Embed override styles */
+
+
+/* font- overrride */
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+.tourdates .cash_event, .tourdates .cash_event:nth-child(even), .tourdates .cash_event:nth-child(odd), .cm-store .cm-inner h2, .cm-store .cm-itemprice, .cashmusic.element input[type=submit], .cashmusic.element .button, .tourdates .cash_purchase_url, .tourdates .cash_map_url a{
+      font-family: 'Lora', serif;
+      text-transform: uppercase;
+}
+
+#mainspc{
+  background:transparent;
+  color:#fff;
+}
+
+.singlepurchase .cash_singlepurchase_itemprice, .cash_notation, .cash_comments, .singlepurchase .cash_singlepurchase_itemdescription{
+  color:#fff;
+}
+
+.cashmusic.element input{
+  background:#111;
+  border:none;
+  padding:36px;
+}
+
+
+/* tour dates */
+
+.tourdates .cash_event, .tourdates .cash_event:nth-child(even), .tourdates .cash_event:nth-child(odd){
+  background:none;
+  border:none;
+  border-bottom:solid 1px rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 0px;
+}
+
+.tourdates .cash_timeandplace{
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.tourdates .cash_comments{
+  font-family: Nunito;
+}
+
+/* Store override */
+.cm-store.cm-front{
+  max-width:none;
+  height:auto;
+  width:100%;
+}
+
+.cm-store .cm-inner h2{
+  display: block;
+  margin:18px 0 0 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cm-store .cm-itemprice{
+  display: block;
+  text-align: center;
+  margin:0 0 18px 0;
+}
+
+.cm-store .cm-description{
+  display: block;
+  text-align: center;
+}
+
+.cashmusic.element input[type=submit], .cashmusic.element .button, .tourdates .cash_purchase_url, .tourdates .cash_map_url a{
+  border:solid 1px;
+  border-color: #cccccc;
+  color:#cccccc;
+  padding:14px 20px;
+}
+
+.tourdates .cash_purchase_url, .tourdates .cash_map_url a{
+  padding:10px 20px;
+}
+
+.cashmusic.element  input[type=submit]:hover, .cashmusic.element  .button:hover, .tourdates .cash_purchase_url:hover, .tourdates .cash_map_url a:hover{
+  background: #cccccc;
+}
+
+.cashmusic.element select{
+  border-color:#000;
+  background-color:#111;
+}
+
+
+.cm-store .cm-showcart{color:#fff;}
+.cm-store .cm-showcart svg path{fill:#cccccc;}
+.cm-store .cm-showcart svg rect{fill:#666666;}
