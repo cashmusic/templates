@@ -1,0 +1,247 @@
+/*
+polgyon.css - Linear Template Example styles ( Mobile First )
+*/
+
+/* Generic (Page) */
+
+body{
+  color:#fff;
+  background:#222;
+}
+
+#wrapper{
+  width:100%;
+  margin:0;
+  padding:55px 0;
+  background: url(../img/audio-background.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a{
+  color:#cccccc;
+  opacity: 1;
+}
+
+/* Font - Override */
+
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+h1,h2,h3,h4,h5,h6, nav li a, div.cashmusic.soundplayer.playlist.nowplaying, div.cashmusic.soundplayer.playlist.playtime{
+  font-family: 'Lora', serif;
+  text-transform: uppercase;
+}
+
+/* Site Header */
+
+header[role=banner] .logo{
+  margin:0;
+  padding:0;
+  position: fixed;
+  top:0;
+  left:20px;
+  text-align: left;
+  font-size: 26px;
+  z-index: 1100;
+  width:auto;
+}
+
+header[role=banner]  h2{
+  position: fixed;
+  font-size: 22px;
+  line-height: 26px;
+  bottom:20px;
+  left:20px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+}
+
+header[role=banner]  h2 a{
+  color:#fff;
+  text-decoration: underline;
+}
+
+/* Navigation */
+
+nav{
+  text-align: right;
+  background: transparent;
+  border-bottom:solid 1px rgba(255,255,255,0.1);
+  background:rgba(0,0,0,0.9);
+  z-index: 1000;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  font-size: 22px;
+  border:none;
+  border-bottom:solid 1px rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+nav ul li:last-of-type a{
+  border:none;
+} 
+
+#menutoggle{
+  left:auto;
+  right:20px;
+}
+
+/* Hero */
+
+.hero{
+  position: relative;
+  width:100%;
+  padding:0;
+  margin:0;
+  z-index: 100;
+  background:rgba(0,0,0,0.6);
+  text-transform: uppercase;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+}
+
+.hero .inner{
+  display: block;
+  width:100%;
+  position: absolute;
+  bottom:0px;
+  left:0px;
+}
+
+.hero img{
+  width:100%;
+  margin:0;
+  display: inline-block;
+}
+
+/* Audio Player */
+
+div.cashmusic.soundplayer.playlist.container{
+  position: relative;
+  bottom:0;
+  background:rgba(0,0,0,0.6);
+  padding:30px 30px 20px 30px;
+  text-align: left;
+}
+
+div.cashmusic.soundplayer.playlist.toggletracklist{
+  color:#333;
+}
+
+div.cashmusic.soundplayer.playlist.controls, div.cashmusic.soundplayer.playlist.seekbarcontainer{
+  filter: invert(100%);
+  -webkit-filter: invert(100%)
+}
+
+div.cashmusic.soundplayer.playlist.tracklist ol{
+  background:rgba(17,17,17,0.3);
+}
+
+div.cashmusic.soundplayer.playlist.nowplaying, div.cashmusic.soundplayer.playlist.playtime{
+font-size: 18px;
+line-height: 20px;
+}
+
+/* Main (Articles) */
+
+main[role="main"]{
+  max-width:none;
+  background:rgba(0,0,0,0.9) url(../img/noise.png);
+  background-attachment: fixed;
+  background-size: 6%;
+  color:#fff;
+  padding:36px 0;
+  width:100%;
+  position: relative;
+  z-index: 200;
+  -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+article{
+  margin:0 auto 18px auto;
+  width:90%;
+  overflow:hidden;
+  background:rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+  border: solid 1px #000;
+  text-align: center;
+}
+
+article header{
+  margin:0 0 72px 0;
+}
+
+article p{
+  opacity: 0.6;
+}
+
+article h1, article h2{
+  font-size: 36px;
+}
+
+article h3{
+  font-size: 22px;
+  line-height: 20px;
+}
+
+/* Cart button */
+
+.cm-cartbutton{
+  background-color:#111;
+  top:6px;
+  right:60px;
+}
+
+/* Aside */
+
+aside{
+  padding:36px 0;
+  margin:0;
+  background: #000;
+  position: relative;
+  z-index: 1000;
+}
+
+aside .social-links{
+  margin:36px 0 0 0;
+}
+
+aside .social-links li a{
+  fill:#333;
+  border:solid 2px #333;
+}
+
+/* Page Footer */
+
+footer{
+  margin:0 0 -100px 0;
+  padding:20px;
+  background:#000;
+  position: relative;
+}
+
+footer a{
+  color:#333;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 48em) {
+header[role=banner]{height:100vh;}
+header[role=banner] .logo{padding:4px 0;}
+header[role=banner] h2{text-align: left; pointer-events: all; opacity: 1;}
+.hero{position: fixed;top:50%;left:50%;margin:-225px 0 0 -225px;width:450px;height:450px;}
+nav { background: transparent; border-bottom:solid 1px rgba(255,255,255,0.2);}
+nav ul li a{ padding:20px 18px; border:none; border-right:solid 1px rgba(255,255,255,0.1);}
+article{width:50%; padding:72px 36px;}
+.cm-cartbutton{top:100px;right:33px;}
+
+}

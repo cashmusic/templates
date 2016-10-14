@@ -1,0 +1,446 @@
+/*
+nothern-lights.css
+Linear Template Example styles
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lato');
+
+html{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  overflow-x: hidden!important;
+}
+
+#menutoggle{
+  position: fixed;
+  opacity: 1;
+  margin:0;
+  pointer-events: all;
+  width:30px;
+  top:30px;
+  left:30px;
+}
+
+#menutoggle span{
+  background:#000;
+}
+
+.collapsed #menutoggle span{
+  background:#fff;
+}
+
+nav{
+  -webkit-transition: 0.3s  ease-in-out;
+  transition: 0.3s  ease-in-out;  
+  display: table;
+  height:100vh;
+  padding:0;
+  margin:0;
+  background: rgba(255,255,255,0.9);
+  border-right:solid 1px rgba(255,255,255,0.1);
+  z-index: 1;
+}
+
+nav.collapsed{
+  left:-101%;
+  height:100vh;
+}
+
+nav ul {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+nav ul li{
+  display: block;
+  border-bottom:solid 1px rgba(0,0,0,0.1);
+}
+
+nav li:last-of-type{
+    border:none;
+}
+
+nav ul li a {
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  color:#000;
+  border:none;
+}
+
+h1,h2,h3,h4,h5,h6{
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+body{
+  color:#fff;
+  background:#222;
+  font-family: 'Lato', sans-serif;
+}
+
+a{
+  color:#fff;
+}
+
+p{
+  text-align: justify;
+}
+
+header[role=banner]{
+  background:none;
+  height:100vh;
+  position: relative;
+}
+
+header[role=banner] .logo{
+  height:auto;
+  width:100%;
+  margin:100px 0px;
+  padding:0;
+  letter-spacing: 20px;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  /*font-family: 'Rakkas', cursive;
+  font-family: 'Eczar', serif;*/
+  font-family: 'Fjalla One', sans-serif;
+}
+
+h2{
+  font-size: 30px;
+}
+
+hr{
+padding:60px auto;
+border: none;
+height:1px;
+background: rgba(255,255,255,0.2);
+display: block;
+-webkit-transform: rotate(-6deg);
+-moz-transform: rotate(-6deg);
+-ms-transform: rotate(-6deg);
+-o-transform: rotate(-6deg);
+}
+
+/* Hero */
+
+.hero h1{
+  padding:150px 0 50px 0;
+    font-size:50px;
+    line-height: 50px;
+}
+
+/* Shopping Cart */
+
+.cm-cartbutton{
+  top:30px;
+  right:25px;
+  background-color:rgba(0,0,0,0.3);
+}
+
+/* Signup form */
+
+header[role=banner] .cashmusic.embed.link{
+  /*position:fixed;
+  top:30px;
+  left:15px;*/
+  text-align: center;
+  width:200px;
+  margin:0 auto;
+  display: inline-block;
+  z-index: 200;
+}
+
+header[role=banner] .cashmusic.embed.link a{
+  text-decoration: none;
+  border:solid 5px #fff;
+  padding:20px 50px;
+  margin:36px 0;
+  display: inline-block;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+}
+
+
+
+/* Background Image*/
+
+.bg-fixed{
+  position: fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: url(../img/northern-lights.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: none;
+  z-index: -100;
+}
+
+.bg-fixed.blurred{
+  -webkit-filter: blur(10px);
+-moz-filter: blur(10px);
+-o-filter: blur(10px);
+-ms-filter: blur(10px);
+filter: blur(10px);
+background-blend-mode: difference;
+}
+
+
+/* Layout */
+
+
+
+
+main[role="main"]{
+  max-width:none;
+  color:#fff;
+  padding:30px 0;
+  width:auto;
+  -webkit-transition: 0.3s  ease-in-out;
+  transition: 0.3s  ease-in-out;
+}
+
+article{
+  width: 90%;
+  padding: 15px;
+  text-align: left;
+  border:none;
+}
+
+article:before{
+  content: "";
+    background:rgba(0,0,0,0.2);
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+}
+
+
+article header{
+  text-align: left;
+}
+
+article header h2{
+  text-align: left;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+/* News */
+
+#news article{
+  background:rgba(0,0,0,0.1);
+  margin-bottom: 2px;
+}
+
+
+#news .article-image{
+  width:30%;
+  display: inline-block;
+  margin:-20px 0 0 -20px;
+  vertical-align: top;
+}
+
+#news .article-image img{
+  margin:0;
+}
+
+#news .article-content{
+  width:70%;
+  display: inline-block;
+}
+
+
+/* Social Links */
+
+
+.social-links{
+  margin:0 auto;
+}
+
+.social-links a {
+border:none;
+}
+
+.social-links a svg{
+  fill:#fff;
+}
+
+/* Footer */
+
+footer p{
+text-align:center;
+}
+
+/* Larger Screens */
+
+@media screen and (min-width: 48em){
+  
+  /* layout */
+  
+  #wrapper{
+    width:75%;
+    height:100vh;
+    margin:0 0 0 25%;
+    padding:0;
+    display: block;
+    -webkit-transition: 0.3s  ease-in-out;
+  transition: 0.3s  ease-in-out;
+  }
+
+  .fullwidth #wrapper{
+    margin:0 12.5%;
+    padding:0;
+    -webkit-transition: 0.3s  ease-in-out;
+    transition: 0.3s  ease-in-out;
+  }
+  
+  header[role=banner] .logo{
+    margin:30px 0;
+  }
+  
+  .fullwidth header[role=banner] .logo{
+    height:85px;
+    width:100vh;
+    text-align: center;
+    font-size: 20px;
+    margin:0;
+    line-height:85px;
+    position: fixed;
+    bottom:0;
+    right:0;
+    -webkit-transform-origin: 0 0%;
+        -moz-transform-origin: 0 0%;
+         -ms-transform-origin: 0 0%;
+          -o-transform-origin: 0 0%;
+             transform-origin: 0 0%;
+     -webkit-transform: rotate(-90deg) translate(-100%, 0%);
+        -moz-transform: rotate(-90deg) translate(-100%, 0%);
+         -ms-transform: rotate(-90deg) translate(-100%, 0%);
+          -o-transform: rotate(-90deg) translate(-100%, 0%);
+             transform: rotate(-90deg) translate(-100%, 0%);
+  }
+  
+  /* Articles */
+  
+  article {
+    width:80%;
+    padding:15px;
+  }
+  
+  article header h2{
+      width:70%;
+  }
+  
+  /* Navigation */
+  
+  #menutoggle span{
+    background:#fff;
+  }
+  
+  nav {
+    width:25%;
+    background: rgba(255,255,255,0.01);
+  }
+
+
+  nav ul li, nav ul li a {
+    display: block;
+    color:#fff;
+  }
+
+  nav ul li{
+    border-bottom:solid 1px rgba(255,255,255,0.1);
+  }
+
+  nav ul li a {
+    text-align: right;
+    padding:30px 60px;
+  }
+
+  nav ul li:last-of-type {
+    border:none;
+  }
+
+  cm-cartbutton {
+    right: 40px!important;
+    top: 25px!important;
+  }
+  
+  
+  /* Hero */
+
+  .hero{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -250px;
+  width: 500px;
+  height:500px;
+  padding:0;
+  text-transform: uppercase;
+  text-align: center;
+  }
+
+  .hero .inner{
+    width:50%;
+    display: inline-block;
+  }
+
+  .hero img{
+    width:100%;
+    margin:0;
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  }
+
+  .hero .cashmusic{
+    width:440px!important;
+    padding:30px;
+    margin:-200px 0 0 0;
+  }
+
+
+  .hero h1{
+      padding:0;
+      font-size:100px;
+      line-height: 100px;
+  }
+  
+  /* Social Links */
+  
+  aside{
+    position: fixed;
+    bottom: 0;
+    right:10px;
+  }
+
+  .social-links li {
+    display: block;
+  }
+
+}

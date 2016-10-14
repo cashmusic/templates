@@ -1,0 +1,62 @@
+/* CASH Embed override styles */
+
+
+#mainspc{
+  background:transparent;
+  color:#fff;
+}
+
+
+.singlepurchase .cash_singlepurchase_itemprice, .cash_notation, .cash_comments, .singlepurchase .cash_singlepurchase_itemdescription{
+  color:#fff;
+}
+
+.cashmusic.element input{
+  background:#fff;
+  border:none;
+  padding:36px;
+}
+
+
+/* tour dates */
+
+.tourdates .cash_event, .tourdates .cash_event:nth-child(even), .tourdates .cash_event:nth-child(odd){
+  background:none;
+  border:none;
+  border-bottom:solid 1px rgba(255,255,255,0.1);
+  color: #fff;
+    font-family: 'Yatra One', cursive;
+}
+
+
+/* Store override */
+.cm-store.cm-front{
+  max-width:none;
+  height:auto;
+  background:rgba(0,0,0,0.5);
+}
+
+
+.cm-grid .cm-store.unfeatured-items {
+  height:100%;
+}
+
+.cm-grid .cm-store.unfeatured-items .cm-item{
+  width:24.5%;
+}
+
+.cm-grid .cm-store.unfeatured-items .cm-item:nth-child(odd){
+}
+
+
+.cm-store.cm-front{
+  width:100%;
+}
+
+.cm-store .cm-showcart{
+  color:#fff;
+}
+
+.cm-store .cm-showcart svg{
+  fill:#fff!important;
+}
